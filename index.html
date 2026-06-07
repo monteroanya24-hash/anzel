@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liezel Ann Villanueva — Marketing Strategist & Digital Growth Specialist</title>
+    <meta name="description" content="Portfolio and CV of Liezel Ann Villanueva — a marketing strategist specializing in funnel design, market research, and digital advertising." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50:  "#fff8ec",
+                100: "#ffefd1",
+                200: "#ffdda0",
+                300: "#ffc364",
+                400: "#ffa32b",
+                500: "#ff8a0a",
+                600: "#e66e05",
+                700: "#b85308",
+                800: "#8e400e",
+                900: "#5c2a0c",
+              },
+            },
+            fontFamily: {
+              sans:    ["Inter",    "ui-sans-serif", "system-ui", "sans-serif"],
+              display: ["Fraunces", "ui-serif",      "Georgia",   "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        background-color: #faf8f5;
+        color: #1c1917;
+      }
+      .font-display {
+        font-family: "Fraunces", ui-serif, Georgia, serif;
+        font-optical-sizing: auto;
+        letter-spacing: -0.02em;
+      }
+      .bg-grain {
+        background-image: radial-gradient(circle at 1px 1px, rgba(28,25,23,0.06) 1px, transparent 0);
+        background-size: 24px 24px;
+      }
+      @media print {
+        body { background: white; }
+        .no-print { display: none !important; }
+      }
+      .nav-link { position: relative; }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0; bottom: -4px;
+        height: 1.5px; width: 0;
+        background: #e66e05;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after { width: 100%; }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- ============ NAV ============ -->
+    <header id="siteNav" class="no-print fixed inset-x-0 top-0 z-50 bg-transparent transition-all duration-300">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-10">
+        <a href="#top" class="flex items-center gap-2">
+          <div class="flex h-9 w-9 items-center justify-center rounded-full bg-stone-900 font-display text-base font-semibold text-brand-300">L</div>
+          <div class="hidden sm:block">
+            <div class="font-display text-sm font-semibold leading-none text-stone-900">Liezel Ann Villanueva</div>
+            <div class="mt-1 text-[10px] uppercase tracking-[0.18em] text-stone-500">Marketing Strategist</div>
+          </div>
+        </a>
+        <nav class="hidden items-center gap-8 md:flex">
+          <a href="#about"      class="nav-link text-sm font-medium text-stone-700 hover:text-stone-900">About</a>
+          <a href="#skills"     class="nav-link text-sm font-medium text-stone-700 hover:text-stone-900">Skills</a>
+          <a href="#experience" class="nav-link text-sm font-medium text-stone-700 hover:text-stone-900">Experience</a>
+          <a href="#education"  class="nav-link text-sm font-medium text-stone-700 hover:text-stone-900">Education</a>
+          <a href="#contact"    class="nav-link text-sm font-medium text-stone-700 hover:text-stone-900">Contact</a>
+        </nav>
+        <a href="#contact" class="group inline-flex items-center gap-1.5 rounded-full bg-stone-900 px-4 py-2 text-xs font-semibold text-brand-200 transition hover:bg-stone-800">
+          Hire Me
+          <svg class="h-3.5 w-3.5 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- ============ HERO ============ -->
+      <section id="top" class="relative overflow-hidden pt-36 pb-24 md:pt-44 md:pb-32">
+        <div class="bg-grain pointer-events-none absolute inset-0 opacity-60"></div>
+        <div class="pointer-events-none absolute -top-24 right-0 h-[500px] w-[500px] rounded-full bg-brand-200/40 blur-3xl"></div>
+        <div class="pointer-events-none absolute -bottom-40 -left-20 h-[420px] w-[420px] rounded-full bg-brand-100/70 blur-3xl"></div>
+
+        <div class="relative mx-auto max-w-6xl px-6 md:px-10">
+          <div class="grid gap-12 md:grid-cols-12 md:gap-10">
+            <div class="md:col-span-8">
+              <div class="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-700">
+                <span class="h-px w-8 bg-brand-600"></span>
+                Portfolio · CV · 2026
+              </div>
+
+              <h1 class="font-display mt-6 text-5xl font-semibold leading-[1.02] tracking-tight text-stone-900 md:text-7xl">
+                Marketing strategist
+                <br />
+                who listens <span class="italic text-brand-700">before</span> she
+                <br />
+                builds the funnel.
+              </h1>
+
+              <p class="mt-8 max-w-2xl text-lg leading-relaxed text-stone-600 md:text-xl">
+                I'm <strong class="text-stone-900">Liezel Ann Villanueva</strong> — a strategist, researcher, and digital marketer from Davao City. I combine three years of front-line customer insight with hands-on SEO and marketing work to build campaigns that actually connect with real people.
+              </p>
+
+              <div class="mt-10 flex flex-wrap items-center gap-3">
+                <a href="#contact" class="group inline-flex items-center gap-2 rounded-full bg-stone-900 px-6 py-3 text-sm font-semibold text-brand-200 shadow-lg shadow-stone-900/10 transition hover:bg-stone-800">
+                  Let's Work Together
+                  <svg class="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </a>
+                <a href="#experience" class="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-white/60 px-6 py-3 text-sm font-semibold text-stone-800 backdrop-blur transition hover:border-stone-400 hover:bg-white">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  View Full CV
+                </a>
+                <a href="https://monteroanya24-hash.github.io/liezelann.github.io/#work" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full px-4 py-3 text-sm font-semibold text-stone-700 transition hover:text-stone-900">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  See Portfolio Site
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </a>
+              </div>
+
+              <dl class="mt-16 grid max-w-3xl grid-cols-2 gap-y-8 gap-x-6 border-t border-stone-200 pt-10 md:grid-cols-4">
+                <div>
+                  <dt class="font-display text-4xl font-semibold text-stone-900 md:text-5xl">5+</dt>
+                  <dd class="mt-2 text-xs uppercase tracking-wider text-stone-500">Years of Professional Experience</dd>
+                </div>
+                <div>
+                  <dt class="font-display text-4xl font-semibold text-stone-900 md:text-5xl">5</dt>
+                  <dd class="mt-2 text-xs uppercase tracking-wider text-stone-500">Companies &amp; Brands Served</dd>
+                </div>
+                <div>
+                  <dt class="font-display text-4xl font-semibold text-stone-900 md:text-5xl">2</dt>
+                  <dd class="mt-2 text-xs uppercase tracking-wider text-stone-500">Languages: English &amp; Tagalog</dd>
+                </div>
+                <div>
+                  <dt class="font-display text-4xl font-semibold text-stone-900 md:text-5xl">100%</dt>
+                  <dd class="mt-2 text-xs uppercase tracking-wider text-stone-500">Committed to Every Role</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="md:col-span-4">
+              <div class="sticky top-28 space-y-5">
+                <div class="overflow-hidden rounded-3xl border border-stone-200 bg-white/70 p-6 shadow-xl shadow-stone-900/5 backdrop-blur">
+                  <div class="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-700">
+                    <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    Quick Contact
+                  </div>
+                  <ul class="mt-5 space-y-4 text-sm text-stone-700">
+                    <li class="flex items-start gap-3">
+                      <svg class="mt-0.5 h-4 w-4 shrink-0 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                      <span>+63 916 396 1196</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <svg class="mt-0.5 h-4 w-4 shrink-0 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                      <a href="mailto:monteroanya24@gmail.com" class="break-all hover:text-brand-700">monteroanya24@gmail.com</a>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <svg class="mt-0.5 h-4 w-4 shrink-0 text-stone-400" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.23 0z"/></svg>
+                      <span>Liezel Ann Villanueva</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <svg class="mt-0.5 h-4 w-4 shrink-0 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                      <span>Brgy. Ula, Tugbok Dist., Davao City</span>
+                    </li>
+                  </ul>
+                  <a href="mailto:monteroanya24@gmail.com" class="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-brand-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700">
+                    Send a Message
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                  </a>
+                </div>
+
+                <div class="rounded-3xl border border-stone-900 bg-stone-900 p-6 text-stone-100">
+                  <div class="text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-300">Currently</div>
+                  <p class="font-display mt-3 text-lg leading-snug text-white">
+                    Open to Marketing, Strategy, and Digital Growth roles — remote or hybrid.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section id="about" class="relative py-24 md:py-32">
+        <div class="mx-auto max-w-6xl px-6 md:px-10">
+          <div class="mb-14 max-w-3xl">
+            <div class="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-700">
+              <span class="h-px w-8 bg-brand-600"></span>About
+            </div>
+            <h2 class="font-display mt-4 text-4xl font-semibold text-stone-900 md:text-5xl">
+              Customer-first strategy, grounded in real conversations.
+            </h2>
+            <p class="mt-5 text-base leading-relaxed text-stone-600 md:text-lg">
+              I didn't start in marketing — I started on the phones, in the chats, and behind the desks where real customer problems live. That's my edge: I design campaigns that sound like humans, because I've spent thousands of hours listening to them.
+            </p>
+          </div>
+
+          <div class="grid gap-10 md:grid-cols-12">
+            <div class="md:col-span-7">
+              <div class="space-y-6 text-base leading-relaxed text-stone-700 md:text-lg">
+                <p>
+                  My background crosses three worlds: <strong class="text-stone-900">customer operations</strong>, <strong class="text-stone-900">executive support</strong>, and <strong class="text-stone-900">digital marketing</strong>. Working as a technical support rep at VXI, a retail rep at Amazon, and a chat rep at Ibex taught me how customers actually think, complain, and decide — the kind of insight you can't learn from a dashboard.
+                </p>
+                <p>
+                  As a personal assistant at GoGreen Manufacturer, I learned how real businesses operate end-to-end — how procurement, production, and communication have to align for anything to move. That operational literacy now shapes the way I think about funnels and go-to-market plans.
+                </p>
+                <p>
+                  Today, at CodeWeb as an SEO specialist, I bring all of this together: I research markets, map customer intent, design content and funnel structures, and measure what actually moves the needle.
+                </p>
+              </div>
+
+              <div class="mt-10 grid gap-4 sm:grid-cols-2">
+                <div class="rounded-2xl border border-stone-200 bg-white/60 p-5 backdrop-blur transition hover:border-brand-300 hover:bg-white">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M12 5v13"/></svg>
+                  </div>
+                  <div class="mt-4 font-display text-lg font-semibold text-stone-900">Analytical Thinker</div>
+                  <p class="mt-1 text-sm leading-relaxed text-stone-600">Breaks complex problems into clear, actionable steps.</p>
+                </div>
+                <div class="rounded-2xl border border-stone-200 bg-white/60 p-5 backdrop-blur transition hover:border-brand-300 hover:bg-white">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <div class="mt-4 font-display text-lg font-semibold text-stone-900">Strong Communicator</div>
+                  <p class="mt-1 text-sm leading-relaxed text-stone-600">Translates ideas clearly across channels and audiences.</p>
+                </div>
+                <div class="rounded-2xl border border-stone-200 bg-white/60 p-5 backdrop-blur transition hover:border-brand-300 hover:bg-white">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  </div>
+                  <div class="mt-4 font-display text-lg font-semibold text-stone-900">Dependable &amp; Responsible</div>
+                  <p class="mt-1 text-sm leading-relaxed text-stone-600">Takes ownership and follows through to completion.</p>
+                </div>
+                <div class="rounded-2xl border border-stone-200 bg-white/60 p-5 backdrop-blur transition hover:border-brand-300 hover:bg-white">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8L20 10l-5.2 2.6L13 19l-1-6-6-2 6-2z"/></svg>
+                  </div>
+                  <div class="mt-4 font-display text-lg font-semibold text-stone-900">Organized &amp; Strategic</div>
+                  <p class="mt-1 text-sm leading-relaxed text-stone-600">Structures work so nothing important slips through the cracks.</p>
+                </div>
+              </div>
+            </div>
+
+            <aside class="md:col-span-5">
+              <div class="relative rounded-3xl bg-stone-900 p-8 text-stone-100 md:p-10">
+                <div class="absolute -top-4 left-8 flex h-8 items-center gap-1.5 rounded-full bg-brand-500 px-3 text-[10px] font-bold uppercase tracking-wider text-white">
+                  <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8L20 10l-5.2 2.6L13 19l-1-6-6-2 6-2z"/></svg>
+                  My Approach
+                </div>
+                <blockquote class="font-display text-2xl leading-snug text-white md:text-3xl">
+                  “Good marketing is organized listening. My job is to turn what customers already say into what they'll do next.”
+                </blockquote>
+                <div class="mt-8 space-y-4 border-t border-stone-700 pt-6 text-sm text-stone-300">
+                  <div class="flex items-center gap-3">
+                    <svg class="h-4 w-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                    Strategy rooted in customer insight
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <svg class="h-4 w-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    Research before assumptions
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <svg class="h-4 w-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    Measurable, accountable work
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section id="skills" class="relative border-y border-stone-200 bg-white/50 py-24 md:py-32">
+        <div class="mx-auto max-w-6xl px-6 md:px-10">
+          <div class="mb-14 max-w-3xl">
+            <div class="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-700">
+              <span class="h-px w-8 bg-brand-600"></span>Skills &amp; Expertise
+            </div>
+            <h2 class="font-display mt-4 text-4xl font-semibold text-stone-900 md:text-5xl">Tools for the full marketing lifecycle.</h2>
+            <p class="mt-5 text-base leading-relaxed text-stone-600 md:text-lg">
+              A balanced toolkit across strategy, research, digital execution, and communication — so I can own a campaign end-to-end or slot cleanly into a larger team.
+            </p>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="group relative overflow-hidden rounded-3xl border border-stone-200 bg-white p-8 transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-2xl hover:shadow-stone-900/5">
+              <div class="absolute right-0 top-0 h-32 w-32 rounded-full bg-brand-100/0 blur-2xl transition group-hover:bg-brand-100/60"></div>
+              <div class="relative">
+                <div class="flex items-center gap-3">
+                  <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-stone-900 text-brand-300">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                  </div>
+                  <h3 class="font-display text-xl font-semibold text-stone-900">Marketing Strategy</h3>
+                </div>
+                <ul class="mt-6 space-y-3">
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Marketing Strategy &amp; Funnel Design</li>
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Go-to-Market Planning</li>
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Customer Journey Mapping</li>
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Campaign Lifecycle Management</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-3xl border border-stone-200 bg-white p-8 transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-2xl hover:shadow-stone-900/5">
+              <div class="absolute right-0 top-0 h-32 w-32 rounded-full bg-brand-100/0 blur-2xl transition group-hover:bg-brand-100/60"></div>
+              <div class="relative">
+                <div class="flex items-center gap-3">
+                  <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-stone-900 text-brand-300">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                  </div>
+                  <h3 class="font-display text-xl font-semibold text-stone-900">Research &amp; Analysis</h3>
+                </div>
+                <ul class="mt-6 space-y-3">
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Market Research &amp; Competitive Analysis</li>
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Customer Insight Synthesis</li>
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Data-Driven Decision Making</li>
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>KPI Tracking &amp; Reporting</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-3xl border border-stone-200 bg-white p-8 transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-2xl hover:shadow-stone-900/5">
+              <div class="absolute right-0 top-0 h-32 w-32 rounded-full bg-brand-100/0 blur-2xl transition group-hover:bg-brand-100/60"></div>
+              <div class="relative">
+                <div class="flex items-center gap-3">
+                  <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-stone-900 text-brand-300">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                  </div>
+                  <h3 class="font-display text-xl font-semibold text-stone-900">Digital Growth</h3>
+                </div>
+                <ul class="mt-6 space-y-3">
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Digital Advertising (Social / Search)</li>
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>SEO &amp; Content Strategy</li>
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Keyword Research &amp; On-Page Optimization</li>
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Conversion Rate Optimization</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-3xl border border-stone-200 bg-white p-8 transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-2xl hover:shadow-stone-900/5">
+              <div class="absolute right-0 top-0 h-32 w-32 rounded-full bg-brand-100/0 blur-2xl transition group-hover:bg-brand-100/60"></div>
+              <div class="relative">
+                <div class="flex items-center gap-3">
+                  <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-stone-900 text-brand-300">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  </div>
+                  <h3 class="font-display text-xl font-semibold text-stone-900">Communication</h3>
+                </div>
+                <ul class="mt-6 space-y-3">
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Client-Facing Communication</li>
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Cross-Functional Collaboration</li>
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Persuasive Copywriting</li>
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Stakeholder Presentation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EXPERIENCE ============ -->
+      <section id="experience" class="py-24 md:py-32">
+        <div class="mx-auto max-w-6xl px-6 md:px-10">
+          <div class="mb-14 max-w-3xl">
+            <div class="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-700">
+              <span class="h-px w-8 bg-brand-600"></span>Work Experience
+            </div>
+            <h2 class="font-display mt-4 text-4xl font-semibold text-stone-900 md:text-5xl">A career built on understanding people — then helping businesses grow.</h2>
+            <p class="mt-5 text-base leading-relaxed text-stone-600 md:text-lg">
+              Five roles, one through-line: every position taught me something about how customers, teams, and markets actually work.
+            </p>
+          </div>
+
+          <div class="relative">
+            <div class="absolute left-4 top-2 bottom-2 hidden w-px bg-gradient-to-b from-brand-400 via-stone-300 to-stone-200 md:left-6 md:block"></div>
+
+            <ol class="space-y-10 md:space-y-14">
+
+              <li class="relative md:pl-20">
+                <div class="absolute left-0 top-2 hidden md:left-2 md:block">
+                  <div class="relative flex h-9 w-9 items-center justify-center">
+                    <span class="absolute inset-0 rounded-full bg-brand-200/70"></span>
+                    <span class="relative flex h-5 w-5 items-center justify-center rounded-full bg-brand-600 text-[10px] font-bold text-white">5</span>
+                  </div>
+                </div>
+                <article class="group rounded-3xl border border-stone-200 bg-white p-7 transition hover:border-stone-300 hover:shadow-xl hover:shadow-stone-900/5 md:p-9">
+                  <div class="flex flex-wrap items-start justify-between gap-4">
+                    <div>
+                      <div class="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-700">
+                        <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        Digital Marketing
+                      </div>
+                      <h3 class="font-display mt-2 text-2xl font-semibold text-stone-900 md:text-3xl">SEO Specialist</h3>
+                      <div class="mt-1 flex flex-wrap items-center gap-2 text-sm text-stone-600">
+                        <span class="font-medium text-stone-900">CodeWeb</span>
+                        <span class="text-stone-300">·</span>
+                        <span>Remote</span>
+                      </div>
+                    </div>
+                    <span class="rounded-full border border-stone-200 bg-stone-50 px-4 py-1.5 text-xs font-semibold text-stone-700">2024 — Present</span>
+                  </div>
+                  <p class="mt-5 text-base leading-relaxed text-stone-600">Driving organic growth through technical SEO, content strategy, and keyword optimization for client portfolios.</p>
+                  <ul class="mt-6 space-y-3 border-t border-stone-100 pt-6">
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Led on-page SEO audits and keyword optimization, improving average search ranking positions for priority pages by up to 40% within 6 months.</li>
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Built content clusters and internal linking structures that increased organic traffic and strengthened topical authority.</li>
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Produced weekly performance reports translating technical SEO data into strategic recommendations for clients.</li>
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Collaborated with developers and content teams to resolve crawlability, speed, and schema markup issues.</li>
+                  </ul>
+                </article>
+              </li>
+
+              <li class="relative md:pl-20">
+                <div class="absolute left-0 top-2 hidden md:left-2 md:block">
+                  <div class="relative flex h-9 w-9 items-center justify-center">
+                    <span class="absolute inset-0 rounded-full bg-brand-200/70"></span>
+                    <span class="relative flex h-5 w-5 items-center justify-center rounded-full bg-brand-600 text-[10px] font-bold text-white">4</span>
+                  </div>
+                </div>
+                <article class="group rounded-3xl border border-stone-200 bg-white p-7 transition hover:border-stone-300 hover:shadow-xl hover:shadow-stone-900/5 md:p-9">
+                  <div class="flex flex-wrap items-start justify-between gap-4">
+                    <div>
+                      <div class="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-700">
+                        <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        Operations &amp; Administration
+                      </div>
+                      <h3 class="font-display mt-2 text-2xl font-semibold text-stone-900 md:text-3xl">Personal Assistant</h3>
+                      <div class="mt-1 flex flex-wrap items-center gap-2 text-sm text-stone-600">
+                        <span class="font-medium text-stone-900">GoGreen Manufacturer</span>
+                        <span class="text-stone-300">·</span>
+                        <span>Davao City</span>
+                      </div>
+                    </div>
+                    <span class="rounded-full border border-stone-200 bg-stone-50 px-4 py-1.5 text-xs font-semibold text-stone-700">2023 — 2024</span>
+                  </div>
+                  <p class="mt-5 text-base leading-relaxed text-stone-600">Supported executive leadership with scheduling, correspondence, and day-to-day operational coordination across the manufacturing floor.</p>
+                  <ul class="mt-6 space-y-3 border-t border-stone-100 pt-6">
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Streamlined calendar management and inter-department coordination, reducing scheduling conflicts by an estimated 35%.</li>
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Prepared reports, presentations, and correspondence for leadership, ensuring accuracy and consistency of tone.</li>
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Organized vendor communications and tracked procurement paperwork to keep production timelines on track.</li>
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Introduced simple SOPs for document handling that made information retrieval faster for the wider team.</li>
+                  </ul>
+                </article>
+              </li>
+
+              <li class="relative md:pl-20">
+                <div class="absolute left-0 top-2 hidden md:left-2 md:block">
+                  <div class="relative flex h-9 w-9 items-center justify-center">
+                    <span class="absolute inset-0 rounded-full bg-brand-200/70"></span>
+                    <span class="relative flex h-5 w-5 items-center justify-center rounded-full bg-brand-600 text-[10px] font-bold text-white">3</span>
+                  </div>
+                </div>
+                <article class="group rounded-3xl border border-stone-200 bg-white p-7 transition hover:border-stone-300 hover:shadow-xl hover:shadow-stone-900/5 md:p-9">
+                  <div class="flex flex-wrap items-start justify-between gap-4">
+                    <div>
+                      <div class="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-700">
+                        <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        Customer Support
+                      </div>
+                      <h3 class="font-display mt-2 text-2xl font-semibold text-stone-900 md:text-3xl">Chat Support Representative</h3>
+                      <div class="mt-1 flex flex-wrap items-center gap-2 text-sm text-stone-600">
+                        <span class="font-medium text-stone-900">Ibex</span>
+                        <span class="text-stone-300">·</span>
+                        <span>Davao City</span>
+                      </div>
+                    </div>
+                    <span class="rounded-full border border-stone-200 bg-stone-50 px-4 py-1.5 text-xs font-semibold text-stone-700">2022 — 2023</span>
+                  </div>
+                  <p class="mt-5 text-base leading-relaxed text-stone-600">Handled multi-channel, concurrent customer conversations for a global account while maintaining quality and empathy.</p>
+                  <ul class="mt-6 space-y-3 border-t border-stone-100 pt-6">
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Managed 3–4 simultaneous chats without compromising accuracy, consistently meeting response-time SLAs.</li>
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Resolved customer issues through structured troubleshooting and clear, concise written communication.</li>
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Contributed to improved CSAT scores through patient, solution-focused interactions.</li>
+                  </ul>
+                </article>
+              </li>
+
+              <li class="relative md:pl-20">
+                <div class="absolute left-0 top-2 hidden md:left-2 md:block">
+                  <div class="relative flex h-9 w-9 items-center justify-center">
+                    <span class="absolute inset-0 rounded-full bg-brand-200/70"></span>
+                    <span class="relative flex h-5 w-5 items-center justify-center rounded-full bg-brand-600 text-[10px] font-bold text-white">2</span>
+                  </div>
+                </div>
+                <article class="group rounded-3xl border border-stone-200 bg-white p-7 transition hover:border-stone-300 hover:shadow-xl hover:shadow-stone-900/5 md:p-9">
+                  <div class="flex flex-wrap items-start justify-between gap-4">
+                    <div>
+                      <div class="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-700">
+                        <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        Customer Support
+                      </div>
+                      <h3 class="font-display mt-2 text-2xl font-semibold text-stone-900 md:text-3xl">Retail Customer Service Representative</h3>
+                      <div class="mt-1 flex flex-wrap items-center gap-2 text-sm text-stone-600">
+                        <span class="font-medium text-stone-900">Amazon</span>
+                        <span class="text-stone-300">·</span>
+                        <span>Davao City</span>
+                      </div>
+                    </div>
+                    <span class="rounded-full border border-stone-200 bg-stone-50 px-4 py-1.5 text-xs font-semibold text-stone-700">2021 — 2022</span>
+                  </div>
+                  <p class="mt-5 text-base leading-relaxed text-stone-600">Delivered end-to-end support for a flagship global retail account, covering orders, returns, refunds, and account concerns.</p>
+                  <ul class="mt-6 space-y-3 border-t border-stone-100 pt-6">
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Resolved complex order and account issues across voice and chat while following strict global compliance guidelines.</li>
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Maintained strong quality scores on calls focused on empathy, accuracy, and ownership of customer outcomes.</li>
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Developed a deep understanding of e-commerce customer behavior — insight that now informs my marketing strategy work.</li>
+                  </ul>
+                </article>
+              </li>
+
+              <li class="relative md:pl-20">
+                <div class="absolute left-0 top-2 hidden md:left-2 md:block">
+                  <div class="relative flex h-9 w-9 items-center justify-center">
+                    <span class="absolute inset-0 rounded-full bg-brand-200/70"></span>
+                    <span class="relative flex h-5 w-5 items-center justify-center rounded-full bg-brand-600 text-[10px] font-bold text-white">1</span>
+                  </div>
+                </div>
+                <article class="group rounded-3xl border border-stone-200 bg-white p-7 transition hover:border-stone-300 hover:shadow-xl hover:shadow-stone-900/5 md:p-9">
+                  <div class="flex flex-wrap items-start justify-between gap-4">
+                    <div>
+                      <div class="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-700">
+                        <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        Customer Support
+                      </div>
+                      <h3 class="font-display mt-2 text-2xl font-semibold text-stone-900 md:text-3xl">Technical Support Representative</h3>
+                      <div class="mt-1 flex flex-wrap items-center gap-2 text-sm text-stone-600">
+                        <span class="font-medium text-stone-900">VXI Global Holdings</span>
+                        <span class="text-stone-300">·</span>
+                        <span>Davao City</span>
+                      </div>
+                    </div>
+                    <span class="rounded-full border border-stone-200 bg-stone-50 px-4 py-1.5 text-xs font-semibold text-stone-700">2019 — 2021</span>
+                  </div>
+                  <p class="mt-5 text-base leading-relaxed text-stone-600">First professional role — built a strong foundation in structured problem-solving, communication, and working under pressure.</p>
+                  <ul class="mt-6 space-y-3 border-t border-stone-100 pt-6">
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Diagnosed and resolved technical issues for a major telecommunications account, translating complex steps into plain English.</li>
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Developed the analytical habits and patience that continue to define my approach to marketing and research.</li>
+                    <li class="flex items-start gap-3 text-sm leading-relaxed text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>Recognized by team leaders for dependability, attendance, and consistent quality.</li>
+                  </ul>
+                </article>
+              </li>
+
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EDUCATION ============ -->
+      <section id="education" class="border-y border-stone-200 bg-white/50 py-24 md:py-32">
+        <div class="mx-auto max-w-6xl px-6 md:px-10">
+          <div class="mb-14 max-w-3xl">
+            <div class="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-700">
+              <span class="h-px w-8 bg-brand-600"></span>Education &amp; Extras
+            </div>
+            <h2 class="font-display mt-4 text-4xl font-semibold text-stone-900 md:text-5xl">The foundations behind the work.</h2>
+          </div>
+
+          <div class="grid gap-8 md:grid-cols-3">
+            <div class="md:col-span-2">
+              <div class="h-full rounded-3xl border border-stone-200 bg-white p-8 md:p-10">
+                <div class="flex items-center gap-3 text-brand-700">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  <div class="text-[10px] font-semibold uppercase tracking-[0.2em]">Education</div>
+                </div>
+                <h3 class="font-display mt-5 text-2xl font-semibold text-stone-900 md:text-3xl">Bachelor of Science in Business Administration</h3>
+                <p class="mt-2 text-base font-medium text-brand-700">Major in Marketing Management</p>
+                <p class="mt-1 text-sm text-stone-500">University of Mindanao · Davao City, Philippines</p>
+                <ul class="mt-6 space-y-3 border-t border-stone-100 pt-6">
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Coursework in Marketing Management, Consumer Behavior, and Strategic Planning.</li>
+                  <li class="flex items-start gap-3 text-sm text-stone-700"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Built foundational skills in market analysis, brand positioning, and campaign planning.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="space-y-8">
+              <div class="rounded-3xl border border-stone-200 bg-white p-8">
+                <div class="flex items-center gap-3 text-brand-700">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+                  <div class="text-[10px] font-semibold uppercase tracking-[0.2em]">Languages</div>
+                </div>
+                <ul class="mt-6 space-y-4">
+                  <li>
+                    <div class="flex items-center justify-between text-sm">
+                      <span class="font-medium text-stone-900">English</span>
+                      <span class="text-xs text-stone-500">Professional / Fluent</span>
+                    </div>
+                    <div class="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-stone-100">
+                      <div class="h-full w-[95%] rounded-full bg-gradient-to-r from-brand-400 to-brand-600"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flex items-center justify-between text-sm">
+                      <span class="font-medium text-stone-900">Tagalog</span>
+                      <span class="text-xs text-stone-500">Native</span>
+                    </div>
+                    <div class="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-stone-100">
+                      <div class="h-full w-full rounded-full bg-gradient-to-r from-brand-400 to-brand-600"></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="rounded-3xl border border-stone-200 bg-white p-8">
+                <div class="flex items-center gap-3 text-brand-700">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                  <div class="text-[10px] font-semibold uppercase tracking-[0.2em]">Strengths</div>
+                </div>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-xs font-medium text-stone-700">Strategic</span>
+                  <span class="rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-xs font-medium text-stone-700">Analytical</span>
+                  <span class="rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-xs font-medium text-stone-700">Organized</span>
+                  <span class="rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-xs font-medium text-stone-700">Dependable</span>
+                  <span class="rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-xs font-medium text-stone-700">Responsible</span>
+                  <span class="rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-xs font-medium text-stone-700">Communicative</span>
+                  <span class="rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-xs font-medium text-stone-700">Customer-Centric</span>
+                  <span class="rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-xs font-medium text-stone-700">Detail-Oriented</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section id="contact" class="relative overflow-hidden py-24 md:py-32">
+        <div class="bg-grain pointer-events-none absolute inset-0 opacity-60"></div>
+        <div class="pointer-events-none absolute right-0 top-0 h-[400px] w-[400px] rounded-full bg-brand-200/50 blur-3xl"></div>
+
+        <div class="relative mx-auto max-w-6xl px-6 md:px-10">
+          <div class="overflow-hidden rounded-[2rem] border border-stone-900 bg-stone-900 p-10 md:p-16">
+            <div class="grid gap-10 md:grid-cols-2 md:items-center">
+              <div>
+                <div class="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-400">
+                  <span class="h-px w-8 bg-brand-500"></span>Get in touch
+                </div>
+                <h2 class="font-display mt-5 text-4xl font-semibold leading-tight text-white md:text-6xl">
+                  Let's build<br />something that<br />actually converts.
+                </h2>
+                <p class="mt-6 max-w-md text-base leading-relaxed text-stone-300">
+                  Open to marketing, strategy, and digital growth opportunities — remote, hybrid, or on-site in Davao. Reach out and I'll respond within a day.
+                </p>
+
+                <div class="mt-8 flex flex-wrap gap-3">
+                  <a href="mailto:monteroanya24@gmail.com" class="group inline-flex items-center gap-2 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-stone-900 transition hover:bg-brand-400">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    Email Me
+                    <svg class="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                  </a>
+                  <a href="tel:+639163961196" class="inline-flex items-center gap-2 rounded-full border border-stone-700 bg-transparent px-6 py-3 text-sm font-semibold text-white transition hover:border-stone-500">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Call
+                  </a>
+                </div>
+              </div>
+
+              <div class="rounded-2xl border border-stone-800 bg-stone-950/60 p-6 md:p-8">
+                <div class="text-[10px] font-semibold uppercase tracking-[0.2em] text-stone-400">Contact Details</div>
+                <ul class="mt-5 space-y-5">
+                  <li class="flex items-start gap-4">
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-stone-800 text-brand-400">
+                      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <div>
+                      <div class="text-[10px] uppercase tracking-wider text-stone-500">Email</div>
+                      <a href="mailto:monteroanya24@gmail.com" class="text-sm font-medium text-white hover:text-brand-400">monteroanya24@gmail.com</a>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-4">
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-stone-800 text-brand-400">
+                      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <div>
+                      <div class="text-[10px] uppercase tracking-wider text-stone-500">Phone</div>
+                      <a href="tel:+639163961196" class="text-sm font-medium text-white hover:text-brand-400">+63 916 396 1196</a>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-4">
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-stone-800 text-brand-400">
+                      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.23 0z"/></svg>
+                    </div>
+                    <div>
+                      <div class="text-[10px] uppercase tracking-wider text-stone-500">LinkedIn</div>
+                      <span class="text-sm font-medium text-white">Liezel Ann Villanueva</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-4">
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-stone-800 text-brand-400">
+                      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div>
+                      <div class="text-[10px] uppercase tracking-wider text-stone-500">Address</div>
+                      <span class="text-sm font-medium text-white">Brgy. Ula, Tugbok Dist., Davao City</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-4">
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-stone-800 text-brand-400">
+                      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <div>
+                      <div class="text-[10px] uppercase tracking-wider text-stone-500">Portfolio</div>
+                      <a href="https://monteroanya24-hash.github.io/liezelann.github.io/#work" target="_blank" rel="noreferrer" class="text-sm font-medium text-white hover:text-brand-400">View full work</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <footer class="mt-10 flex flex-wrap items-center justify-between gap-4 px-2 text-xs text-stone-500">
+            <div class="flex items-center gap-2">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              © <span id="year"></span> Liezel Ann Villanueva. All rights reserved.
+            </div>
+            <div class="italic">References available upon request.</div>
+          </footer>
+        </div>
+      </section>
+
+    </main>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const nav = document.getElementById('siteNav');
+      const onScroll = () => {
+        if (window.scrollY > 20) {
+          nav.classList.add('border-b', 'border-stone-200/80', 'bg-[#faf8f5]/85', 'backdrop-blur-md');
+          nav.classList.remove('bg-transparent');
+        } else {
+          nav.classList.remove('border-b', 'border-stone-200/80', 'bg-[#faf8f5]/85', 'backdrop-blur-md');
+          nav.classList.add('bg-transparent');
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    </script>
+
+  </body>
+</html>

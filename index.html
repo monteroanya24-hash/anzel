@@ -74,8 +74,8 @@
     <!-- ============ NAV ============ -->
     <header id="siteNav" class="no-print fixed inset-x-0 top-0 z-50 bg-transparent transition-all duration-300">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-10">
-        <a href="#top" class="flex items-center gap-2">
-          <div class="flex h-9 w-9 items-center justify-center rounded-full bg-stone-900 font-display text-base font-semibold text-brand-300">L</div>
+        <a href="#top" class="flex items-center gap-2.5">
+          <img src="profile.jpg" alt="" class="h-9 w-9 rounded-full object-cover ring-2 ring-brand-500/70" />
           <div class="hidden sm:block">
             <div class="font-display text-sm font-semibold leading-none text-stone-900">Liezel Ann Villanueva</div>
             <div class="mt-1 text-[10px] uppercase tracking-[0.18em] text-stone-500">Marketing Strategist</div>
@@ -104,11 +104,11 @@
         <div class="pointer-events-none absolute -bottom-40 -left-20 h-[420px] w-[420px] rounded-full bg-brand-100/70 blur-3xl"></div>
 
         <div class="relative mx-auto max-w-6xl px-6 md:px-10">
-          <div class="grid gap-12 md:grid-cols-12 md:gap-10">
-            <div class="md:col-span-8">
-              <div class="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-700">
+          <div class="mx-auto max-w-3xl text-center">
+              <div class="flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-700">
                 <span class="h-px w-8 bg-brand-600"></span>
                 Portfolio · CV · 2026
+                <span class="h-px w-8 bg-brand-600"></span>
               </div>
 
               <h1 class="font-display mt-6 text-5xl font-semibold leading-[1.02] tracking-tight text-stone-900 md:text-7xl">
@@ -119,11 +119,44 @@
                 builds the funnel.
               </h1>
 
-              <p class="mt-8 max-w-2xl text-lg leading-relaxed text-stone-600 md:text-xl">
+              <p class="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-stone-600 md:text-xl">
                 I'm <strong class="text-stone-900">Liezel Ann Villanueva</strong> — a strategist, researcher, and digital marketer from Davao City. I combine three years of front-line customer insight with hands-on SEO and marketing work to build campaigns that actually connect with real people.
               </p>
 
-              <div class="mt-10 flex flex-wrap items-center gap-3">
+              <!-- 
+                ===============================================
+                PROFILE PHOTO PLACEHOLDER (below the headline)
+                To use your real photo:
+                  1. Save your image as profile.jpg (4:5 ratio ideal)
+                  2. Replace public/images/profile.heic
+                  3. Rebuild the project
+                =============================================== 
+              -->
+              <figure class="relative mx-auto mt-12 max-w-sm">
+                <div class="absolute -top-3 -left-3 h-full w-full rounded-3xl border-2 border-brand-500/70" aria-hidden="true"></div>
+                <div class="relative overflow-hidden rounded-3xl border border-stone-900 shadow-2xl shadow-stone-900/20">
+                  <img
+                    src="profile.jpg"
+                    alt="Liezel Ann Villanueva — Marketing Strategist"
+                    class="aspect-[4/5] w-full object-cover"
+                    loading="eager"
+                  />
+                  <div class="absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-stone-900/80 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-wider text-brand-300 backdrop-blur">
+                    <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    Replace
+                  </div>
+                  <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-stone-900/85 via-stone-900/30 to-transparent p-5 text-left">
+                    <div class="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-300">
+                      <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+                      Marketing Strategist
+                    </div>
+                    <div class="mt-1 font-display text-lg font-semibold text-white">Liezel Ann Villanueva</div>
+                    <div class="text-xs text-stone-300">Davao City, Philippines</div>
+                  </div>
+                </div>
+              </figure>
+
+              <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
                 <a href="#contact" class="group inline-flex items-center gap-2 rounded-full bg-stone-900 px-6 py-3 text-sm font-semibold text-brand-200 shadow-lg shadow-stone-900/10 transition hover:bg-stone-800">
                   Let's Work Together
                   <svg class="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
@@ -139,7 +172,7 @@
                 </a>
               </div>
 
-              <dl class="mt-16 grid max-w-3xl grid-cols-2 gap-y-8 gap-x-6 border-t border-stone-200 pt-10 md:grid-cols-4">
+              <dl class="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-y-8 gap-x-6 border-t border-stone-200 pt-10 md:grid-cols-4">
                 <div>
                   <dt class="font-display text-4xl font-semibold text-stone-900 md:text-5xl">5+</dt>
                   <dd class="mt-2 text-xs uppercase tracking-wider text-stone-500">Years of Professional Experience</dd>
@@ -157,47 +190,6 @@
                   <dd class="mt-2 text-xs uppercase tracking-wider text-stone-500">Committed to Every Role</dd>
                 </div>
               </dl>
-            </div>
-
-            <div class="md:col-span-4">
-              <div class="sticky top-28 space-y-5">
-                <div class="overflow-hidden rounded-3xl border border-stone-200 bg-white/70 p-6 shadow-xl shadow-stone-900/5 backdrop-blur">
-                  <div class="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-700">
-                    <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                    Quick Contact
-                  </div>
-                  <ul class="mt-5 space-y-4 text-sm text-stone-700">
-                    <li class="flex items-start gap-3">
-                      <svg class="mt-0.5 h-4 w-4 shrink-0 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                      <span>+63 916 396 1196</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg class="mt-0.5 h-4 w-4 shrink-0 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                      <a href="mailto:monteroanya24@gmail.com" class="break-all hover:text-brand-700">monteroanya24@gmail.com</a>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg class="mt-0.5 h-4 w-4 shrink-0 text-stone-400" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.23 0z"/></svg>
-                      <span>Liezel Ann Villanueva</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg class="mt-0.5 h-4 w-4 shrink-0 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                      <span>Brgy. Ula, Tugbok Dist., Davao City</span>
-                    </li>
-                  </ul>
-                  <a href="mailto:monteroanya24@gmail.com" class="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-brand-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700">
-                    Send a Message
-                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                  </a>
-                </div>
-
-                <div class="rounded-3xl border border-stone-900 bg-stone-900 p-6 text-stone-100">
-                  <div class="text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-300">Currently</div>
-                  <p class="font-display mt-3 text-lg leading-snug text-white">
-                    Open to Marketing, Strategy, and Digital Growth roles — remote or hybrid.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

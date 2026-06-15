@@ -8,7 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -88,49 +87,45 @@
         }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #FDFCFA; }
-        .dark ::-webkit-scrollbar-track { background: #121212; }
         ::-webkit-scrollbar-thumb { background: #C59B27; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #FF6F00; }
         
         /* Interactive Media and PDF Rendering Styles */
         @media print {
             body { background: white !important; color: black !important; }
-            header, footer, #theme-toggle, #theme-toggle-mobile, #menu-btn, .no-print { display: none !important; }
+            header, footer, #menu-btn, .no-print { display: none !important; }
             .print-full-width { width: 100% !important; max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
             .print-card-break { break-inside: avoid; }
         }
     </style>
 </head>
-<body class="bg-[#FDFBF9] dark:bg-onyx-900 text-onyx-800 dark:text-onyx-50 font-sans transition-colors duration-300">
+<body class="bg-[#FDFBF9] text-onyx-800 font-sans transition-colors duration-300">
 
     <!-- Navigation Bar -->
-    <header id="navbar" class="fixed w-full top-0 left-0 z-50 transition-all duration-300 bg-white/80 dark:bg-onyx-900/80 backdrop-blur-md border-b border-gold-100/50 dark:border-onyx-800/50 no-print">
+    <header id="navbar" class="fixed w-full top-0 left-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gold-100/50 no-print">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#home" class="flex items-center space-x-2 group">
                 <span class="gold-orange-gradient text-white font-serif font-bold w-10 h-10 flex items-center justify-center rounded-lg shadow-md group-hover:scale-105 transition-transform">LV</span>
-                <span class="font-serif text-lg font-bold tracking-wide text-onyx-900 dark:text-white transition-colors">
+                <span class="font-serif text-lg font-bold tracking-wide text-onyx-900 transition-colors">
                     Liezel Ann<span class="text-gold-500"> Villanueva</span>
                 </span>
             </a>
 
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="#home" class="nav-link font-medium hover:text-gold-500 transition-colors text-gold-600 dark:text-gold-300">Home</a>
-                <a href="#about" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800 dark:text-onyx-100">About</a>
-                <a href="#skills" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800 dark:text-onyx-100">Skills</a>
-                <a href="#experience" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800 dark:text-onyx-100">Experience</a>
-                <a href="#education" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800 dark:text-onyx-100">Education</a>
-                <a href="#contact" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800 dark:text-onyx-100">Contact</a>
+                <a href="#home" class="nav-link font-medium hover:text-gold-500 transition-colors text-gold-600">Home</a>
+                <a href="#about" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800">About</a>
+                <a href="#skills" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800">Skills</a>
+                <a href="#experience" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800">Experience</a>
+                <a href="#education" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800">Education</a>
+                <a href="#contact" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800">Contact</a>
             </nav>
 
             <div class="hidden md:flex items-center space-x-4">
-                <a href="officialCV.pdf" download="officialCV.pdf" class="p-2.5 rounded-full hover:bg-gold-50 dark:hover:bg-onyx-800 text-gold-600 dark:text-gold-400 transition-all focus:outline-none" title="Download officialCV.pdf">
+                <a href="officialCV.pdf" target="_blank" class="p-2.5 rounded-full hover:bg-gold-50 text-gold-600 transition-all focus:outline-none" title="Open officialCV.pdf in a new tab">
                     <i class="fa-solid fa-file-pdf text-lg"></i>
                 </a>
-                <button onclick="window.print()" class="p-2.5 rounded-full hover:bg-gold-50 dark:hover:bg-onyx-800 text-gold-600 dark:text-gold-400 transition-all focus:outline-none" title="Print/Save Web Page as PDF">
+                <button onclick="window.print()" class="p-2.5 rounded-full hover:bg-gold-50 text-gold-600 transition-all focus:outline-none" title="Print/Save Web Page as PDF">
                     <i class="fa-solid fa-print text-lg"></i>
-                </button>
-                <button id="theme-toggle" class="p-2.5 rounded-full hover:bg-gold-50 dark:hover:bg-onyx-800 text-gold-500 dark:text-gold-400 transition-all focus:outline-none" aria-label="Toggle Theme">
-                    <i id="theme-toggle-icon" class="fa-solid fa-moon text-lg"></i>
                 </button>
                 <a href="#contact" class="px-5 py-2.5 text-xs font-semibold tracking-wider uppercase rounded-full gold-orange-gradient text-white hover:shadow-lg hover:shadow-orange-500/20 active:scale-95 transition-all">
                     Hire Me
@@ -138,28 +133,25 @@
             </div>
 
             <div class="flex items-center space-x-3 md:hidden">
-                <a href="officialCV.pdf" download="officialCV.pdf" class="p-2 rounded-full hover:bg-gold-50 dark:hover:bg-onyx-800 text-gold-600" title="Download officialCV.pdf">
+                <a href="officialCV.pdf" target="_blank" class="p-2 rounded-full hover:bg-gold-50 text-gold-600" title="Open officialCV.pdf in a new tab">
                     <i class="fa-solid fa-file-pdf"></i>
                 </a>
-                <button onclick="window.print()" class="p-2 rounded-full hover:bg-gold-50 dark:hover:bg-onyx-800 text-gold-600" title="Print / PDF">
+                <button onclick="window.print()" class="p-2 rounded-full hover:bg-gold-50 text-gold-600" title="Print / PDF">
                     <i class="fa-solid fa-print"></i>
                 </button>
-                <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-gold-50 dark:hover:bg-onyx-800 text-gold-500 transition-all">
-                    <i id="theme-toggle-icon-mobile" class="fa-solid fa-moon"></i>
-                </button>
-                <button id="menu-btn" class="p-2 focus:outline-none text-onyx-800 dark:text-white" aria-label="Open Menu">
+                <button id="menu-btn" class="p-2 focus:outline-none text-onyx-800" aria-label="Open Menu">
                     <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 dark:bg-onyx-900/95 backdrop-blur-lg border-b border-gold-100/30 w-full absolute top-full left-0 py-6 px-8 flex flex-col space-y-4 shadow-xl">
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-b border-gold-100/30 w-full absolute top-full left-0 py-6 px-8 flex flex-col space-y-4 shadow-xl">
             <a href="#home" class="mobile-nav-link text-lg font-medium text-gold-500 py-1">Home</a>
-            <a href="#about" class="mobile-nav-link text-lg font-medium text-onyx-800 dark:text-onyx-100 py-1">About</a>
-            <a href="#skills" class="mobile-nav-link text-lg font-medium text-onyx-800 dark:text-onyx-100 py-1">Skills</a>
-            <a href="#experience" class="mobile-nav-link text-lg font-medium text-onyx-800 dark:text-onyx-100 py-1">Experience</a>
-            <a href="#education" class="mobile-nav-link text-lg font-medium text-onyx-800 dark:text-onyx-100 py-1">Education</a>
-            <a href="#contact" class="mobile-nav-link text-lg font-medium text-onyx-800 dark:text-onyx-100 py-1">Contact</a>
+            <a href="#about" class="mobile-nav-link text-lg font-medium text-onyx-800 py-1">About</a>
+            <a href="#skills" class="mobile-nav-link text-lg font-medium text-onyx-800 py-1">Skills</a>
+            <a href="#experience" class="mobile-nav-link text-lg font-medium text-onyx-800 py-1">Experience</a>
+            <a href="#education" class="mobile-nav-link text-lg font-medium text-onyx-800 py-1">Education</a>
+            <a href="#contact" class="mobile-nav-link text-lg font-medium text-onyx-800 py-1">Contact</a>
             <a href="#contact" class="w-full py-3 text-center font-semibold rounded-lg gold-orange-gradient text-white mt-4 block">
                 Let's Talk
             </a>
@@ -167,15 +159,15 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden bg-gradient-to-b from-[#FFFBF7] to-[#FDFBF9] dark:from-onyx-950 dark:to-onyx-900 print:min-h-0 print:py-10">
-        <div class="absolute top-1/4 left-10 w-72 h-72 rounded-full bg-gold-200/10 dark:bg-gold-500/5 blur-3xl animate-pulse-slow no-print"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-orange-300/10 dark:bg-orange-500/5 blur-3xl animate-float no-print"></div>
-        <div class="absolute inset-0 opacity-5 dark:opacity-[0.03] pointer-events-none no-print" style="background-image: radial-gradient(#C59B27 1px, transparent 1px); background-size: 32px 32px;"></div>
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden bg-gradient-to-b from-[#FFFBF7] to-[#FDFBF9] print:min-h-0 print:py-10">
+        <div class="absolute top-1/4 left-10 w-72 h-72 rounded-full bg-gold-200/10 blur-3xl animate-pulse-slow no-print"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-orange-300/10 blur-3xl animate-float no-print"></div>
+        <div class="absolute inset-0 opacity-5 pointer-events-none no-print" style="background-image: radial-gradient(#C59B27 1px, transparent 1px); background-size: 32px 32px;"></div>
 
         <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 w-full print-full-width">
             
             <div class="lg:col-span-7 space-y-8 text-center lg:text-left reveal-element active print-full-width print:text-left">
-                <div class="inline-flex items-center space-x-2 bg-orange-50 dark:bg-orange-950/30 border border-orange-200/50 dark:border-orange-800/30 px-5 py-2 rounded-full text-orange-600 dark:text-orange-400 font-semibold text-xs uppercase tracking-widest no-print">
+                <div class="inline-flex items-center space-x-2 bg-orange-50 border border-orange-200/50 px-5 py-2 rounded-full text-orange-600 font-semibold text-xs uppercase tracking-widest no-print">
                     <span class="flex h-2.5 w-2.5 relative">
                       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
                       <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-orange-500"></span>
@@ -183,16 +175,16 @@
                     <span>Marketing & Customer Experience Professional</span>
                 </div>
                 
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-onyx-900 dark:text-white leading-tight">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-onyx-900 leading-tight">
                     Strategic, Analytical & <br>
                     <span class="gold-orange-text">Dependable Results</span>
                 </h1>
                 
-                <p class="text-lg md:text-xl font-light text-onyx-800/80 dark:text-onyx-200/80 max-w-xl mx-auto lg:mx-0 leading-relaxed print:text-black">
+                <p class="text-lg md:text-xl font-light text-onyx-800/80 max-w-xl mx-auto lg:mx-0 leading-relaxed print:text-black">
                     I am Liezel Ann Villanueva, a Business Administration graduate majoring in Marketing Management. I coordinate results-driven marketing strategies, SEO setups, and premier customer experiences.
                 </p>
 
-                <div class="h-8 flex justify-center lg:justify-start items-center space-x-2 text-md font-mono text-gold-600 dark:text-gold-400 no-print">
+                <div class="h-8 flex justify-center lg:justify-start items-center space-x-2 text-md font-mono text-gold-600 no-print">
                     <span class="fa-solid fa-bullseye text-orange-500"></span>
                     <span id="typing-text" class="border-r-2 border-orange-500 pr-1 font-semibold"></span>
                 </div>
@@ -201,49 +193,49 @@
                     <a href="#experience" class="px-8 py-4 rounded-full font-semibold gold-orange-gradient text-white shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 hover:scale-[1.02] active:scale-95 transition-all">
                         View Work Experience
                     </a>
-                    <!-- Direct Static Link to officialCV.pdf with download tag -->
-                    <a href="officialCV.pdf" download="officialCV.pdf" class="px-8 py-4 rounded-full font-semibold border-2 border-gold-500/40 hover:border-gold-500 text-onyx-800 dark:text-white hover:bg-gold-500/5 transition-all flex items-center justify-center" title="Click to download Liezel Ann Villanueva's officialCV.pdf">
+                    <!-- Direct Static Link to officialCV.pdf configured to open in a new tab -->
+                    <a href="officialCV.pdf" target="_blank" class="px-8 py-4 rounded-full font-semibold border-2 border-gold-500/40 hover:border-gold-500 text-onyx-800 hover:bg-gold-500/5 transition-all flex items-center justify-center" title="Click to view Liezel Ann Villanueva's officialCV.pdf in a new tab">
                         <i class="fa-solid fa-file-pdf mr-2 text-orange-500"></i> <span>Get PDF CV</span>
                     </a>
                 </div>
 
                 <!-- Contact Info - Improved Spacing -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-gold-200/30 dark:border-onyx-800/50">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-gold-200/30">
                     <div class="group">
                         <div class="flex items-center space-x-2 mb-2">
-                            <span class="w-9 h-9 rounded-lg bg-gold-100 dark:bg-gold-950/40 flex items-center justify-center text-gold-500 group-hover:scale-110 transition-transform">
+                            <span class="w-9 h-9 rounded-lg bg-gold-100 flex items-center justify-center text-gold-500 group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-phone text-xs"></i>
                             </span>
-                            <p class="text-[10px] tracking-wider text-onyx-800/50 dark:text-onyx-400/50 uppercase font-semibold">Phone</p>
+                            <p class="text-[10px] tracking-wider text-onyx-800/50 uppercase font-semibold">Phone</p>
                         </div>
-                        <a href="tel:+639163961196" class="text-sm font-semibold text-onyx-900 dark:text-white hover:text-gold-500 transition-colors block">+63 916 396 1196</a>
+                        <a href="tel:+639163961196" class="text-sm font-semibold text-onyx-900 hover:text-gold-500 transition-colors block">+63 916 396 1196</a>
                     </div>
                     <div class="group">
                         <div class="flex items-center space-x-2 mb-2">
-                            <span class="w-9 h-9 rounded-lg bg-orange-100 dark:bg-orange-950/40 flex items-center justify-center text-orange-500 group-hover:scale-110 transition-transform">
+                            <span class="w-9 h-9 rounded-lg bg-orange-100 flex items-center justify-center text-orange-500 group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-envelope text-xs"></i>
                             </span>
-                            <p class="text-[10px] tracking-wider text-onyx-800/50 dark:text-onyx-400/50 uppercase font-semibold">Email</p>
+                            <p class="text-[10px] tracking-wider text-onyx-800/50 uppercase font-semibold">Email</p>
                         </div>
-                        <a href="mailto:monteroanya24@gmail.com" class="text-sm font-semibold text-onyx-900 dark:text-white hover:text-gold-500 transition-colors block break-all">monteroanya24@gmail.com</a>
+                        <a href="mailto:monteroanya24@gmail.com" class="text-sm font-semibold text-onyx-900 hover:text-gold-500 transition-colors block break-all">monteroanya24@gmail.com</a>
                     </div>
                     <div class="group">
                         <div class="flex items-center space-x-2 mb-2">
-                            <span class="w-9 h-9 rounded-lg bg-gold-100 dark:bg-gold-950/40 flex items-center justify-center text-gold-500 group-hover:scale-110 transition-transform">
+                            <span class="w-9 h-9 rounded-lg bg-gold-100 flex items-center justify-center text-gold-500 group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-location-dot text-xs"></i>
                             </span>
-                            <p class="text-[10px] tracking-wider text-onyx-800/50 dark:text-onyx-400/50 uppercase font-semibold">Location</p>
+                            <p class="text-[10px] tracking-wider text-onyx-800/50 uppercase font-semibold">Location</p>
                         </div>
-                        <p class="text-sm font-semibold text-onyx-900 dark:text-white">Davao City, PH</p>
+                        <p class="text-sm font-semibold text-onyx-900">Davao City, PH</p>
                     </div>
                     <div class="group">
                         <div class="flex items-center space-x-2 mb-2">
-                            <span class="w-9 h-9 rounded-lg bg-orange-100 dark:bg-orange-950/40 flex items-center justify-center text-orange-500 group-hover:scale-110 transition-transform">
+                            <span class="w-9 h-9 rounded-lg bg-orange-100 flex items-center justify-center text-orange-500 group-hover:scale-110 transition-transform">
                                 <i class="fa-brands fa-linkedin-in text-xs"></i>
                             </span>
-                            <p class="text-[10px] tracking-wider text-onyx-800/50 dark:text-onyx-400/50 uppercase font-semibold">LinkedIn</p>
+                            <p class="text-[10px] tracking-wider text-onyx-800/50 uppercase font-semibold">LinkedIn</p>
                         </div>
-                        <p class="text-sm font-semibold text-onyx-900 dark:text-white">Liezel Ann Villanueva</p>
+                        <p class="text-sm font-semibold text-onyx-900">Liezel Ann Villanueva</p>
                     </div>
                 </div>
             </div>
@@ -252,12 +244,12 @@
             <div class="lg:col-span-5 flex justify-center relative reveal-element active print:block print:max-w-xs">
                 <div class="absolute -inset-4 rounded-3xl border border-gold-500/30 max-w-[360px] aspect-[4/5] mx-auto w-full pointer-events-none transform translate-x-2 translate-y-2 no-print"></div>
                 
-                <div class="relative w-full max-w-[360px] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl group border-4 border-white dark:border-onyx-800 bg-[#E7E7E7]">
+                <div class="relative w-full max-w-[360px] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl group border-4 border-white bg-[#E7E7E7]">
                     <img id="profile-img" src="images/profile-placeholder.jpg" 
                          alt="Liezel Ann Villanueva Profile" 
                          class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-onyx-900 via-transparent to-transparent opacity-50 no-print"></div>
-                    <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/10 dark:bg-onyx-900/40 backdrop-blur-md border border-white/20 dark:border-onyx-800/30 text-white flex items-center justify-between no-print">
+                    <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-between no-print">
                         <div>
                             <p class="text-[10px] tracking-wider text-gold-300 uppercase">Current Station</p>
                             <p class="font-serif font-bold text-sm text-white">Tugbok Dist, Davao City</p>
@@ -273,61 +265,61 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-white dark:bg-onyx-950 relative print:py-6">
+    <section id="about" class="py-24 bg-white relative print:py-6">
         <div class="max-w-7xl mx-auto px-6 print-full-width">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal-element print:text-left print:mb-6">
                 <span class="text-gold-500 font-semibold tracking-widest text-xs uppercase block mb-3">My Profile</span>
-                <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 dark:text-white print:text-2xl">About Liezel Ann</h2>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 print:text-2xl">About Liezel Ann</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-gold-500 to-orange-500 mx-auto mt-5 rounded-full print:hidden"></div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center print-full-width">
                 <div class="lg:col-span-6 space-y-6 reveal-element print-full-width">
-                    <h3 class="text-2xl font-serif text-onyx-900 dark:text-white print:text-xl">
+                    <h3 class="text-2xl font-serif text-onyx-900 print:text-xl">
                         A Dedicated <span class="text-gold-500">Strategist & Executive Associate</span>
                     </h3>
-                    <p class="text-onyx-800/70 dark:text-onyx-200/70 leading-relaxed font-light print:text-black">
+                    <p class="text-onyx-800/70 leading-relaxed font-light print:text-black">
                         I am an analytical, responsible, and highly organized business graduate with an absolute commitment to quality work. Backed by solid background in customer technical systems support, marketing management concepts, and search engine optimization (SEO), I quickly align with dynamic team objectives.
                     </p>
-                    <p class="text-onyx-800/70 dark:text-onyx-200/70 leading-relaxed font-light print:text-black">
+                    <p class="text-onyx-800/70 leading-relaxed font-light print:text-black">
                         My approach merges systematic marketing operations with transparent, powerful communication. Over the course of 3 productive years representing top companies in Davao (including Amazon and Technical support wings), I developed a client-oriented mindset that ensures dependable support pipelines.
                     </p>
-                    <div class="border-l-4 border-orange-500 pl-5 py-3 italic text-onyx-800/80 dark:text-onyx-100/80 print:text-black print:border-gold-500">
+                    <div class="border-l-4 border-orange-500 pl-5 py-3 italic text-onyx-800/80 print:text-black print:border-gold-500">
                         "Reliable execution is the core of every great corporate partnership."
                     </div>
                 </div>
 
                 <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6 reveal-element print:grid-cols-2">
-                    <div class="bg-gradient-to-br from-gold-50/50 to-white dark:from-onyx-900 dark:to-onyx-950 p-6 rounded-2xl border border-gold-200/20 shadow-sm print:border-neutral-300 print:p-4">
-                        <div class="w-12 h-12 rounded-xl bg-gold-100 dark:bg-gold-950/40 flex items-center justify-center text-gold-600 mb-4 print:hidden">
+                    <div class="bg-gradient-to-br from-gold-50/50 to-white p-6 rounded-2xl border border-gold-200/20 shadow-sm print:border-neutral-300 print:p-4">
+                        <div class="w-12 h-12 rounded-xl bg-gold-100 flex items-center justify-center text-gold-600 mb-4 print:hidden">
                             <i class="fa-solid fa-chess-knight text-lg"></i>
                         </div>
-                        <h4 class="font-serif font-bold text-md text-onyx-900 dark:text-white mb-2">Strategist</h4>
-                        <p class="text-xs text-onyx-800/60 dark:text-onyx-400/60 leading-relaxed print:text-black">Formulates creative digital campaigns, structured sales frameworks, and long-term search engine goals.</p>
+                        <h4 class="font-serif font-bold text-md text-onyx-900 mb-2">Strategist</h4>
+                        <p class="text-xs text-onyx-800/60 leading-relaxed print:text-black">Formulates creative digital campaigns, structured sales frameworks, and long-term search engine goals.</p>
                     </div>
 
-                    <div class="bg-gradient-to-br from-orange-50/50 to-white dark:from-onyx-900 dark:to-onyx-950 p-6 rounded-2xl border border-orange-200/20 shadow-sm print:border-neutral-300 print:p-4">
-                        <div class="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-950/40 flex items-center justify-center text-orange-500 mb-4 print:hidden">
+                    <div class="bg-gradient-to-br from-orange-50/50 to-white p-6 rounded-2xl border border-orange-200/20 shadow-sm print:border-neutral-300 print:p-4">
+                        <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-orange-500 mb-4 print:hidden">
                             <i class="fa-solid fa-comments text-lg"></i>
                         </div>
-                        <h4 class="font-serif font-bold text-md text-onyx-900 dark:text-white mb-2">Excellent Communicator</h4>
-                        <p class="text-xs text-onyx-800/60 dark:text-onyx-400/60 leading-relaxed print:text-black">Fluent in English and Tagalog; provides empathetic technical support and high-conversion client communication.</p>
+                        <h4 class="font-serif font-bold text-md text-onyx-900 mb-2">Excellent Communicator</h4>
+                        <p class="text-xs text-onyx-800/60 leading-relaxed print:text-black">Fluent in English and Tagalog; provides empathetic technical support and high-conversion client communication.</p>
                     </div>
 
-                    <div class="bg-gradient-to-br from-orange-50/50 to-white dark:from-onyx-900 dark:to-onyx-950 p-6 rounded-2xl border border-orange-200/20 shadow-sm print:border-neutral-300 print:p-4">
-                        <div class="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-950/40 flex items-center justify-center text-orange-500 mb-4 print:hidden">
+                    <div class="bg-gradient-to-br from-orange-50/50 to-white p-6 rounded-2xl border border-orange-200/20 shadow-sm print:border-neutral-300 print:p-4">
+                        <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-orange-500 mb-4 print:hidden">
                             <i class="fa-solid fa-chart-line text-lg"></i>
                         </div>
-                        <h4 class="font-serif font-bold text-md text-onyx-900 dark:text-white mb-2">Analytical & Organized</h4>
-                        <p class="text-xs text-onyx-800/60 dark:text-onyx-400/60 leading-relaxed print:text-black">Translates website metrics, competitor performance, and workflow logs into optimized systems.</p>
+                        <h4 class="font-serif font-bold text-md text-onyx-900 mb-2">Analytical & Organized</h4>
+                        <p class="text-xs text-onyx-800/60 leading-relaxed print:text-black">Translates website metrics, competitor performance, and workflow logs into optimized systems.</p>
                     </div>
 
-                    <div class="bg-gradient-to-br from-gold-50/50 to-white dark:from-onyx-900 dark:to-onyx-950 p-6 rounded-2xl border border-gold-200/20 shadow-sm print:border-neutral-300 print:p-4">
-                        <div class="w-12 h-12 rounded-xl bg-gold-100 dark:bg-gold-950/40 flex items-center justify-center text-gold-600 mb-4 print:hidden">
+                    <div class="bg-gradient-to-br from-gold-50/50 to-white p-6 rounded-2xl border border-gold-200/20 shadow-sm print:border-neutral-300 print:p-4">
+                        <div class="w-12 h-12 rounded-xl bg-gold-100 flex items-center justify-center text-gold-600 mb-4 print:hidden">
                             <i class="fa-solid fa-circle-check text-lg"></i>
                         </div>
-                        <h4 class="font-serif font-bold text-md text-onyx-900 dark:text-white mb-2">Dependable & Responsible</h4>
-                        <p class="text-xs text-onyx-800/60 dark:text-onyx-400/60 leading-relaxed print:text-black">Always delivers on-schedule with standard executive accountability and precise administrative alignment.</p>
+                        <h4 class="font-serif font-bold text-md text-onyx-900 mb-2">Dependable & Responsible</h4>
+                        <p class="text-xs text-onyx-800/60 leading-relaxed print:text-black">Always delivers on-schedule with standard executive accountability and precise administrative alignment.</p>
                     </div>
                 </div>
             </div>
@@ -335,11 +327,11 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-24 bg-[#FFFBF7] dark:bg-onyx-900 relative print:py-6">
+    <section id="skills" class="py-24 bg-[#FFFBF7] relative print:py-6">
         <div class="max-w-7xl mx-auto px-6 print-full-width">
             <div class="text-center max-w-3xl mx-auto mb-12 reveal-element print:text-left print:mb-6">
                 <span class="text-orange-500 font-semibold tracking-widest text-xs uppercase block mb-3">Abilities</span>
-                <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 dark:text-white print:text-2xl">Core Professional Skills</h2>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 print:text-2xl">Core Professional Skills</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-gold-500 to-orange-500 mx-auto mt-5 rounded-full print:hidden"></div>
             </div>
 
@@ -347,51 +339,51 @@
                 <button onclick="switchSkillTab('marketing')" id="tab-marketing" class="skill-tab-btn px-6 py-3 rounded-full font-semibold text-xs uppercase tracking-wider gold-orange-gradient text-white shadow-md transition-all">
                     Marketing & SEO
                 </button>
-                <button onclick="switchSkillTab('operations')" id="tab-operations" class="skill-tab-btn px-6 py-3 rounded-full font-semibold text-xs uppercase tracking-wider bg-white dark:bg-onyx-800 hover:bg-gold-50 border border-gold-100 text-onyx-800 dark:text-onyx-100 transition-all">
+                <button onclick="switchSkillTab('operations')" id="tab-operations" class="skill-tab-btn px-6 py-3 rounded-full font-semibold text-xs uppercase tracking-wider bg-white hover:bg-gold-50 border border-gold-100 text-onyx-800 transition-all">
                     Operations & Communication
                 </button>
-                <button onclick="switchSkillTab('personal')" id="tab-personal" class="skill-tab-btn px-6 py-3 rounded-full font-semibold text-xs uppercase tracking-wider bg-white dark:bg-onyx-800 hover:bg-gold-50 border border-gold-100 text-onyx-800 dark:text-onyx-100 transition-all">
+                <button onclick="switchSkillTab('personal')" id="tab-personal" class="skill-tab-btn px-6 py-3 rounded-full font-semibold text-xs uppercase tracking-wider bg-white hover:bg-gold-50 border border-gold-100 text-onyx-800 transition-all">
                     Languages & Systems
                 </button>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal-element print:grid-cols-2" id="skill-display">
                 <div class="skill-group-card space-y-4">
-                    <div class="p-6 bg-white dark:bg-onyx-950 rounded-2xl border border-gold-100/50 shadow-sm print:p-3 print:border-neutral-200">
+                    <div class="p-6 bg-white rounded-2xl border border-gold-100/50 shadow-sm print:p-3 print:border-neutral-200">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="font-medium text-onyx-900 dark:text-white text-sm">Marketing Strategy & Funnel Design</span>
+                            <span class="font-medium text-onyx-900 text-sm">Marketing Strategy & Funnel Design</span>
                             <span class="text-xs text-orange-500 font-semibold">95%</span>
                         </div>
-                        <div class="w-full h-2 bg-onyx-50 dark:bg-onyx-800 rounded-full overflow-hidden print:bg-neutral-200">
+                        <div class="w-full h-2 bg-onyx-50 rounded-full overflow-hidden print:bg-neutral-200">
                             <div class="h-full gold-orange-gradient" style="width: 95%"></div>
                         </div>
                     </div>
-                    <div class="p-6 bg-white dark:bg-onyx-950 rounded-2xl border border-gold-100/50 shadow-sm print:p-3 print:border-neutral-200">
+                    <div class="p-6 bg-white rounded-2xl border border-gold-100/50 shadow-sm print:p-3 print:border-neutral-200">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="font-medium text-onyx-900 dark:text-white text-sm">SEO Search Engine Optimization (Codeweeb)</span>
+                            <span class="font-medium text-onyx-900 text-sm">SEO Search Engine Optimization (Codeweeb)</span>
                             <span class="text-xs text-orange-500 font-semibold">90%</span>
                         </div>
-                        <div class="w-full h-2 bg-onyx-50 dark:bg-onyx-800 rounded-full overflow-hidden print:bg-neutral-200">
+                        <div class="w-full h-2 bg-onyx-50 rounded-full overflow-hidden print:bg-neutral-200">
                             <div class="h-full gold-orange-gradient" style="width: 90%"></div>
                         </div>
                     </div>
                 </div>
                 <div class="skill-group-card space-y-4">
-                    <div class="p-6 bg-white dark:bg-onyx-950 rounded-2xl border border-gold-100/50 shadow-sm print:p-3 print:border-neutral-200">
+                    <div class="p-6 bg-white rounded-2xl border border-gold-100/50 shadow-sm print:p-3 print:border-neutral-200">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="font-medium text-onyx-900 dark:text-white text-sm">Market Research & Competitive Analysis</span>
+                            <span class="font-medium text-onyx-900 text-sm">Market Research & Competitive Analysis</span>
                             <span class="text-xs text-orange-500 font-semibold">92%</span>
                         </div>
-                        <div class="w-full h-2 bg-onyx-50 dark:bg-onyx-800 rounded-full overflow-hidden print:bg-neutral-200">
+                        <div class="w-full h-2 bg-onyx-50 rounded-full overflow-hidden print:bg-neutral-200">
                             <div class="h-full gold-orange-gradient" style="width: 92%"></div>
                         </div>
                     </div>
-                    <div class="p-6 bg-white dark:bg-onyx-950 rounded-2xl border border-gold-100/50 shadow-sm print:p-3 print:border-neutral-200">
+                    <div class="p-6 bg-white rounded-2xl border border-gold-100/50 shadow-sm print:p-3 print:border-neutral-200">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="font-medium text-onyx-900 dark:text-white text-sm">Digital Advertising (Social / Search Ads)</span>
+                            <span class="font-medium text-onyx-900 text-sm">Digital Advertising (Social / Search Ads)</span>
                             <span class="text-xs text-orange-500 font-semibold">88%</span>
                         </div>
-                        <div class="w-full h-2 bg-onyx-50 dark:bg-onyx-800 rounded-full overflow-hidden print:bg-neutral-200">
+                        <div class="w-full h-2 bg-onyx-50 rounded-full overflow-hidden print:bg-neutral-200">
                             <div class="h-full gold-orange-gradient" style="width: 88%"></div>
                         </div>
                     </div>
@@ -415,11 +407,11 @@
     </section>
 
     <!-- Work Experience Section -->
-    <section id="experience" class="py-24 bg-white dark:bg-onyx-950 relative print:py-6">
+    <section id="experience" class="py-24 bg-white relative print:py-6">
         <div class="max-w-7xl mx-auto px-6 print-full-width">
             <div class="text-center max-w-3xl mx-auto mb-20 reveal-element print:text-left print:mb-6">
                 <span class="text-gold-500 font-semibold tracking-widest text-xs uppercase block mb-3">Professional Journey</span>
-                <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 dark:text-white print:text-2xl">Employment History</h2>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 print:text-2xl">Employment History</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-gold-500 to-orange-500 mx-auto mt-5 rounded-full print:hidden"></div>
             </div>
 
@@ -428,20 +420,20 @@
 
                 <!-- Job 1: SEO Specialist -->
                 <div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-16 reveal-element print:block print:mb-6 print-card-break">
-                    <div class="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white dark:bg-onyx-900 border-4 border-gold-500 z-10 flex items-center justify-center no-print">
+                    <div class="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white border-4 border-gold-500 z-10 flex items-center justify-center no-print">
                         <span class="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
                     </div>
                     <div class="hidden md:block text-right self-center print:hidden">
                         <span class="text-lg font-serif font-bold text-gold-500 tracking-wide">SEO Specialist</span>
-                        <p class="text-xs text-onyx-800/40 dark:text-onyx-400/60 uppercase tracking-widest font-semibold mt-1">Codeweeb Company</p>
+                        <p class="text-xs text-onyx-800/40 uppercase tracking-widest font-semibold mt-1">Codeweeb Company</p>
                     </div>
-                    <div class="p-8 bg-gradient-to-br from-[#FFFBF7] to-white dark:from-onyx-900 dark:to-onyx-950 border border-gold-100/50 dark:border-onyx-800/50 rounded-2xl shadow-sm hover:shadow-md transition-all print:border-none print:p-0 print:bg-none">
+                    <div class="p-8 bg-gradient-to-br from-[#FFFBF7] to-white border border-gold-100/50 rounded-2xl shadow-sm hover:shadow-md transition-all print:border-none print:p-0 print:bg-none">
                         <div class="flex justify-between items-start print:block">
-                            <h3 class="font-serif font-bold text-xl text-onyx-900 dark:text-white print:text-base">SEO Specialist</h3>
-                            <span class="text-xs font-semibold text-gold-600 dark:text-gold-400 print:text-black">Codeweeb Company</span>
+                            <h3 class="font-serif font-bold text-xl text-onyx-900 print:text-base">SEO Specialist</h3>
+                            <span class="text-xs font-semibold text-gold-600 print:text-black">Codeweeb Company</span>
                         </div>
                         <p class="text-xs text-orange-500 mt-2 print:text-black font-semibold">Technical Optimization & Traffic Strategist</p>
-                        <ul class="text-xs text-onyx-800/60 dark:text-onyx-400/60 mt-4 leading-relaxed list-disc list-inside space-y-2 print:text-black">
+                        <ul class="text-xs text-onyx-800/60 mt-4 leading-relaxed list-disc list-inside space-y-2 print:text-black">
                             <li>Orchestrated key on-page SEO frameworks and content matrices to drive targeted consumer traffic.</li>
                             <li>Monitored keyword performance algorithms, backlink metrics, and competitor ranking systems.</li>
                             <li>Ensured web optimization layouts conformed strictly with marketing management priorities.</li>
@@ -451,16 +443,16 @@
 
                 <!-- Job 2: Personal Assistant -->
                 <div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-16 reveal-element print:block print:mb-6 print-card-break">
-                    <div class="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white dark:bg-onyx-900 border-4 border-orange-500 z-10 flex items-center justify-center no-print">
+                    <div class="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white border-4 border-orange-500 z-10 flex items-center justify-center no-print">
                         <span class="w-1.5 h-1.5 bg-gold-500 rounded-full"></span>
                     </div>
-                    <div class="p-8 bg-gradient-to-br from-[#FFFBF7] to-white dark:from-onyx-900 dark:to-onyx-950 border border-gold-100/50 dark:border-onyx-800/50 rounded-2xl shadow-sm hover:shadow-md transition-all text-left print:border-none print:p-0 print:bg-none">
+                    <div class="p-8 bg-gradient-to-br from-[#FFFBF7] to-white border border-gold-100/50 rounded-2xl shadow-sm hover:shadow-md transition-all text-left print:border-none print:p-0 print:bg-none">
                         <div class="flex justify-between items-start print:block">
-                            <h3 class="font-serif font-bold text-xl text-onyx-900 dark:text-white print:text-base">Personal Assistant</h3>
-                            <span class="text-xs font-semibold text-orange-600 dark:text-orange-400 print:text-black">Gogreen Manufacturer Co.</span>
+                            <h3 class="font-serif font-bold text-xl text-onyx-900 print:text-base">Personal Assistant</h3>
+                            <span class="text-xs font-semibold text-orange-600 print:text-black">Gogreen Manufacturer Co.</span>
                         </div>
                         <p class="text-xs text-gold-500 mt-2 print:text-black font-semibold">Executive Support & Administrative Operations</p>
-                        <ul class="text-xs text-onyx-800/60 dark:text-onyx-400/60 mt-4 leading-relaxed list-disc list-inside space-y-2 print:text-black">
+                        <ul class="text-xs text-onyx-800/60 mt-4 leading-relaxed list-disc list-inside space-y-2 print:text-black">
                             <li>Managed complex schedules, supplier correspondences, inventory status trackers, and logistics routing.</li>
                             <li>Drafted official business presentations, communications, and internal corporate coordination summaries.</li>
                             <li>Identified procedural bottlenecks to secure organized, highly dependable business reporting channels.</li>
@@ -468,39 +460,39 @@
                     </div>
                     <div class="hidden md:block self-center print:hidden">
                         <span class="text-lg font-serif font-bold text-orange-500 tracking-wide">Personal Assistant</span>
-                        <p class="text-xs text-onyx-800/40 dark:text-onyx-400/60 uppercase tracking-widest font-semibold mt-1">Gogreen Manufacturer</p>
+                        <p class="text-xs text-onyx-800/40 uppercase tracking-widest font-semibold mt-1">Gogreen Manufacturer</p>
                     </div>
                 </div>
 
                 <!-- Job 3: Call Center -->
                 <div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-16 reveal-element print:block print:mb-6 print-card-break">
-                    <div class="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white dark:bg-onyx-900 border-4 border-gold-500 z-10 flex items-center justify-center no-print">
+                    <div class="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white border-4 border-gold-500 z-10 flex items-center justify-center no-print">
                         <span class="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
                     </div>
                     <div class="hidden md:block text-right self-center print:hidden">
                         <span class="text-lg font-serif font-bold text-gold-500 tracking-wide">Customer Support Specialist</span>
-                        <p class="text-xs text-onyx-800/40 dark:text-onyx-400/60 uppercase tracking-widest font-semibold mt-1">3 Davao Companies • 3 Years</p>
+                        <p class="text-xs text-onyx-800/40 uppercase tracking-widest font-semibold mt-1">3 Davao Companies • 3 Years</p>
                     </div>
-                    <div class="p-8 bg-gradient-to-br from-[#FFFBF7] to-white dark:from-onyx-900 dark:to-onyx-950 border border-gold-100/50 dark:border-onyx-800/50 rounded-2xl shadow-sm hover:shadow-md transition-all print:border-none print:p-0 print:bg-none">
+                    <div class="p-8 bg-gradient-to-br from-[#FFFBF7] to-white border border-gold-100/50 rounded-2xl shadow-sm hover:shadow-md transition-all print:border-none print:p-0 print:bg-none">
                         <div class="flex justify-between items-start print:block">
-                            <h3 class="font-serif font-bold text-xl text-onyx-900 dark:text-white print:text-base">Call Center Representative</h3>
-                            <span class="text-xs font-semibold text-gold-600 dark:text-gold-400 print:text-black">3 Davao Offices (3 Years Total)</span>
+                            <h3 class="font-serif font-bold text-xl text-onyx-900 print:text-base">Call Center Representative</h3>
+                            <span class="text-xs font-semibold text-gold-600 print:text-black">3 Davao Offices (3 Years Total)</span>
                         </div>
                         <div class="mt-5 space-y-5">
                             <div class="border-l-2 border-gold-500 pl-4">
-                                <h4 class="font-bold text-xs text-onyx-900 dark:text-white">Amazon</h4>
+                                <h4 class="font-bold text-xs text-onyx-900">Amazon</h4>
                                 <p class="text-[11px] text-orange-500 font-medium">Retail Representative</p>
-                                <p class="text-[11px] text-onyx-800/60 dark:text-onyx-400/60 mt-2 leading-relaxed print:text-black">Managed complex retail accounts, purchase inquiries, billing adjustments, and premium customer retention solutions.</p>
+                                <p class="text-[11px] text-onyx-800/60 mt-2 leading-relaxed print:text-black">Managed complex retail accounts, purchase inquiries, billing adjustments, and premium customer retention solutions.</p>
                             </div>
                             <div class="border-l-2 border-orange-500 pl-4">
-                                <h4 class="font-bold text-xs text-onyx-900 dark:text-white">VXI</h4>
+                                <h4 class="font-bold text-xs text-onyx-900">VXI</h4>
                                 <p class="text-[11px] text-orange-500 font-medium">Technical Support Representative</p>
-                                <p class="text-[11px] text-onyx-800/60 dark:text-onyx-400/60 mt-2 leading-relaxed print:text-black">Resolved critical hardware, software configuration, and line connectivity errors under strict SLA targets.</p>
+                                <p class="text-[11px] text-onyx-800/60 mt-2 leading-relaxed print:text-black">Resolved critical hardware, software configuration, and line connectivity errors under strict SLA targets.</p>
                             </div>
                             <div class="border-l-2 border-gold-500 pl-4">
-                                <h4 class="font-bold text-xs text-onyx-900 dark:text-white">Ibex</h4>
+                                <h4 class="font-bold text-xs text-onyx-900">Ibex</h4>
                                 <p class="text-[11px] text-orange-500 font-medium">Chat Support Representative</p>
-                                <p class="text-[11px] text-onyx-800/60 dark:text-onyx-400/60 mt-2 leading-relaxed print:text-black">Provided real-time parallel support chat sessions maintaining high satisfaction ratings and accurate spelling/grammar.</p>
+                                <p class="text-[11px] text-onyx-800/60 mt-2 leading-relaxed print:text-black">Provided real-time parallel support chat sessions maintaining high satisfaction ratings and accurate spelling/grammar.</p>
                             </div>
                         </div>
                     </div>
@@ -510,43 +502,43 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-24 bg-[#FFFBF7] dark:bg-onyx-900 relative print:py-6">
+    <section id="education" class="py-24 bg-[#FFFBF7] relative print:py-6">
         <div class="max-w-7xl mx-auto px-6 print-full-width">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal-element print:text-left print:mb-6">
                 <span class="text-orange-500 font-semibold tracking-widest text-xs uppercase block mb-3">Qualifications</span>
-                <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 dark:text-white print:text-2xl">Academic Credentials</h2>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 print:text-2xl">Academic Credentials</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-gold-500 to-orange-500 mx-auto mt-5 rounded-full print:hidden"></div>
             </div>
 
-            <div class="max-w-3xl mx-auto bg-white dark:bg-onyx-950 rounded-3xl p-10 border border-gold-100/40 dark:border-onyx-800/40 shadow-lg relative overflow-hidden print:border-none print:p-0 print:shadow-none print:bg-none">
+            <div class="max-w-3xl mx-auto bg-white rounded-3xl p-10 border border-gold-100/40 shadow-lg relative overflow-hidden print:border-none print:p-0 print:shadow-none print:bg-none">
                 <div class="absolute -right-10 -bottom-10 opacity-5 text-gold-500 text-9xl font-serif no-print">BSBA</div>
-                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 border-b border-gold-100 dark:border-onyx-800/50 pb-7 print:border-b print:border-black print:pb-2">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 border-b border-gold-100 pb-7 print:border-b print:border-black print:pb-2">
                     <div>
-                        <h3 class="text-2xl font-serif font-bold text-onyx-900 dark:text-white print:text-lg">Bachelor of Science in Business Administration</h3>
+                        <h3 class="text-2xl font-serif font-bold text-onyx-900 print:text-lg">Bachelor of Science in Business Administration</h3>
                         <p class="text-md font-semibold text-gold-500 mt-2">Major in Marketing Management</p>
                     </div>
-                    <div class="bg-gold-50 dark:bg-gold-950/40 px-5 py-3 rounded-xl text-center border border-gold-200/30 print:border-none print:p-0">
+                    <div class="bg-gold-50 px-5 py-3 rounded-xl text-center border border-gold-200/30 print:border-none print:p-0">
                         <span class="text-xs uppercase font-bold text-orange-500 tracking-wider block print:text-black">Completed</span>
-                        <span class="text-xs font-semibold text-onyx-900 dark:text-white print:text-black">Davao Region College Foundation</span>
+                        <span class="text-xs font-semibold text-onyx-900 print:text-black">Davao Region College Foundation</span>
                     </div>
                 </div>
                 <div class="pt-7 space-y-5">
-                    <p class="text-sm font-light text-onyx-800/80 dark:text-onyx-200/80 leading-relaxed print:text-black">
+                    <p class="text-sm font-light text-onyx-800/80 leading-relaxed print:text-black">
                         Acquired comprehensive knowledge in marketing structures, client consumer psychology, digital advertising campaign models, pricing frameworks, and competitive brand analyses. 
                     </p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-3">
                         <div class="flex items-start space-x-3">
                             <i class="fa-solid fa-square-poll-vertical text-orange-500 mt-1 print:hidden"></i>
                             <div>
-                                <h4 class="font-bold text-xs text-onyx-900 dark:text-white print:text-black">Business Analytics</h4>
-                                <p class="text-xs text-onyx-800/60 dark:text-onyx-400/60 mt-1 leading-relaxed print:text-black">Trained to handle business records, target goals, and corporate presentation models systematically.</p>
+                                <h4 class="font-bold text-xs text-onyx-900 print:text-black">Business Analytics</h4>
+                                <p class="text-xs text-onyx-800/60 mt-1 leading-relaxed print:text-black">Trained to handle business records, target goals, and corporate presentation models systematically.</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-3">
                             <i class="fa-solid fa-bullhorn text-orange-500 mt-1 print:hidden"></i>
                             <div>
-                                <h4 class="font-bold text-xs text-onyx-900 dark:text-white print:text-black">Market Campaign Planning</h4>
-                                <p class="text-xs text-onyx-800/60 dark:text-onyx-400/60 mt-1 leading-relaxed print:text-black">Analyzed modern digital funnels, search marketing behaviors, and customer support conversion funnels.</p>
+                                <h4 class="font-bold text-xs text-onyx-900 print:text-black">Market Campaign Planning</h4>
+                                <p class="text-xs text-onyx-800/60 mt-1 leading-relaxed print:text-black">Analyzed modern digital funnels, search marketing behaviors, and customer support conversion funnels.</p>
                             </div>
                         </div>
                     </div>
@@ -556,59 +548,59 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-white dark:bg-onyx-950 relative print:py-6">
+    <section id="contact" class="py-24 bg-white relative print:py-6">
         <div class="max-w-7xl mx-auto px-6 print-full-width">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start print-full-width">
                 <div class="lg:col-span-5 space-y-8 reveal-element print-full-width">
                     <div>
                         <span class="text-orange-500 font-semibold tracking-widest text-xs uppercase block mb-3">Connect</span>
-                        <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 dark:text-white print:text-2xl">Get in Touch</h2>
+                        <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 print:text-2xl">Get in Touch</h2>
                         <div class="w-20 h-1 bg-gradient-to-r from-gold-500 to-orange-500 mt-5 rounded-full print:hidden"></div>
                     </div>
                     
-                    <p class="text-onyx-800/70 dark:text-onyx-200/70 leading-relaxed font-light print:text-black">
+                    <p class="text-onyx-800/70 leading-relaxed font-light print:text-black">
                         Are you seeking a responsible, analytical, and highly organized executive professional to join your operations? Drop a line directly or verify the credentials listed here.
                     </p>
 
                     <!-- Contact Details - Improved Spacing -->
                     <div class="space-y-5 print:space-y-3">
-                        <div class="flex items-start space-x-4 p-5 rounded-xl bg-gold-50/20 dark:bg-onyx-900 border border-gold-100/50 shadow-sm print:p-3">
-                            <div class="w-11 h-11 rounded-lg bg-gold-100 dark:bg-gold-950/40 flex items-center justify-center text-gold-500 flex-shrink-0 print:hidden">
+                        <div class="flex items-start space-x-4 p-5 rounded-xl bg-gold-50/20 border border-gold-100/50 shadow-sm print:p-3">
+                            <div class="w-11 h-11 rounded-lg bg-gold-100 flex items-center justify-center text-gold-500 flex-shrink-0 print:hidden">
                                 <i class="fa-solid fa-map-location-dot"></i>
                             </div>
                             <div>
-                                <p class="text-xs text-onyx-800/40 dark:text-onyx-400/60 uppercase font-semibold mb-1">Permanent Station</p>
-                                <p class="font-semibold text-sm text-onyx-900 dark:text-white leading-relaxed">Brgy. Ula, Tugbok Dist. Davao City, Philippines</p>
+                                <p class="text-xs text-onyx-800/40 uppercase font-semibold mb-1">Permanent Station</p>
+                                <p class="font-semibold text-sm text-onyx-900 leading-relaxed">Brgy. Ula, Tugbok Dist. Davao City, Philippines</p>
                             </div>
                         </div>
 
-                        <div class="flex items-start space-x-4 p-5 rounded-xl bg-gold-50/20 dark:bg-onyx-900 border border-gold-100/50 shadow-sm print:p-3">
-                            <div class="w-11 h-11 rounded-lg bg-orange-100 dark:bg-orange-950/40 flex items-center justify-center text-orange-500 flex-shrink-0 print:hidden">
+                        <div class="flex items-start space-x-4 p-5 rounded-xl bg-gold-50/20 border border-gold-100/50 shadow-sm print:p-3">
+                            <div class="w-11 h-11 rounded-lg bg-orange-100 flex items-center justify-center text-orange-500 flex-shrink-0 print:hidden">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
                             <div>
-                                <p class="text-xs text-onyx-800/40 dark:text-onyx-400/60 uppercase font-semibold mb-1">Phone Line / Mobile</p>
-                                <a href="tel:+639163961196" class="font-semibold text-sm text-onyx-900 dark:text-white hover:text-gold-500 transition-colors">+63 916 396 1196</a>
+                                <p class="text-xs text-onyx-800/40 uppercase font-semibold mb-1">Phone Line / Mobile</p>
+                                <a href="tel:+639163961196" class="font-semibold text-sm text-onyx-900 hover:text-gold-500 transition-colors">+63 916 396 1196</a>
                             </div>
                         </div>
 
-                        <div class="flex items-start space-x-4 p-5 rounded-xl bg-gold-50/20 dark:bg-onyx-900 border border-gold-100/50 shadow-sm print:p-3">
-                            <div class="w-11 h-11 rounded-lg bg-gold-100 dark:bg-gold-950/40 flex items-center justify-center text-gold-500 flex-shrink-0 print:hidden">
+                        <div class="flex items-start space-x-4 p-5 rounded-xl bg-gold-50/20 border border-gold-100/50 shadow-sm print:p-3">
+                            <div class="w-11 h-11 rounded-lg bg-gold-100 flex items-center justify-center text-gold-500 flex-shrink-0 print:hidden">
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
                             <div>
-                                <p class="text-xs text-onyx-800/40 dark:text-onyx-400/60 uppercase font-semibold mb-1">Primary Email Address</p>
-                                <a href="mailto:monteroanya24@gmail.com" class="font-semibold text-sm text-onyx-900 dark:text-white hover:text-gold-500 transition-colors break-all">monteroanya24@gmail.com</a>
+                                <p class="text-xs text-onyx-800/40 uppercase font-semibold mb-1">Primary Email Address</p>
+                                <a href="mailto:monteroanya24@gmail.com" class="font-semibold text-sm text-onyx-900 hover:text-gold-500 transition-colors break-all">monteroanya24@gmail.com</a>
                             </div>
                         </div>
 
-                        <div class="flex items-start space-x-4 p-5 rounded-xl bg-gold-50/20 dark:bg-onyx-900 border border-gold-100/50 shadow-sm print:p-3">
-                            <div class="w-11 h-11 rounded-lg bg-orange-100 dark:bg-orange-950/40 flex items-center justify-center text-orange-500 flex-shrink-0 print:hidden">
+                        <div class="flex items-start space-x-4 p-5 rounded-xl bg-gold-50/20 border border-gold-100/50 shadow-sm print:p-3">
+                            <div class="w-11 h-11 rounded-lg bg-orange-100 flex items-center justify-center text-orange-500 flex-shrink-0 print:hidden">
                                 <i class="fa-solid fa-globe"></i>
                             </div>
                             <div>
-                                <p class="text-xs text-onyx-800/40 dark:text-onyx-400/60 uppercase font-semibold mb-1">Professional Portfolio Web</p>
-                                <a href="https://monteroanya24-hash.github.io/liezelann.github.io/#work" target="_blank" class="font-semibold text-xs text-onyx-900 dark:text-white hover:text-gold-500 transition-colors break-all leading-relaxed">monteroanya24-hash.github.io/liezelann.github.io/</a>
+                                <p class="text-xs text-onyx-800/40 uppercase font-semibold mb-1">Professional Portfolio Web</p>
+                                <a href="https://monteroanya24-hash.github.io/liezelann.github.io/#work" target="_blank" class="font-semibold text-xs text-onyx-900 hover:text-gold-500 transition-colors break-all leading-relaxed">monteroanya24-hash.github.io/liezelann.github.io/</a>
                             </div>
                         </div>
                     </div>
@@ -616,10 +608,10 @@
                     <div class="pt-6 no-print">
                         <p class="text-xs uppercase tracking-widest font-semibold text-gold-500 mb-4">Connect on Networks</p>
                         <div class="flex space-x-3">
-                            <a href="https://monteroanya24-hash.github.io/liezelann.github.io/#work" target="_blank" class="w-11 h-11 rounded-full border border-gold-200/60 hover:bg-gold-500 hover:text-white hover:border-gold-500 flex items-center justify-center transition-all text-gold-500 dark:text-gold-400">
+                            <a href="https://monteroanya24-hash.github.io/liezelann.github.io/#work" target="_blank" class="w-11 h-11 rounded-full border border-gold-200/60 hover:bg-gold-500 hover:text-white hover:border-gold-500 flex items-center justify-center transition-all text-gold-500">
                                 <i class="fa-solid fa-globe text-lg"></i>
                             </a>
-                            <a href="#" class="w-11 h-11 rounded-full border border-gold-200/60 hover:bg-gold-500 hover:text-white hover:border-gold-500 flex items-center justify-center transition-all text-gold-500 dark:text-gold-400">
+                            <a href="#" class="w-11 h-11 rounded-full border border-gold-200/60 hover:bg-gold-500 hover:text-white hover:border-gold-500 flex items-center justify-center transition-all text-gold-500">
                                 <i class="fa-brands fa-linkedin-in text-lg"></i>
                             </a>
                         </div>
@@ -627,13 +619,13 @@
                 </div>
 
                 <!-- Contact Form -->
-                <div class="lg:col-span-7 bg-white dark:bg-onyx-950 p-10 sm:p-12 rounded-3xl border border-gold-100/40 dark:border-onyx-800/50 shadow-xl relative reveal-element no-print">
-                    <div id="form-success-alert" class="hidden absolute inset-0 bg-white dark:bg-onyx-950 rounded-3xl p-8 flex flex-col items-center justify-center text-center z-10 transition-opacity duration-300">
-                        <div class="w-16 h-16 rounded-full bg-green-100 dark:bg-green-950/40 flex items-center justify-center text-green-500 text-3xl mb-4">
+                <div class="lg:col-span-7 bg-white p-10 sm:p-12 rounded-3xl border border-gold-100/40 shadow-xl relative reveal-element no-print">
+                    <div id="form-success-alert" class="hidden absolute inset-0 bg-white rounded-3xl p-8 flex flex-col items-center justify-center text-center z-10 transition-opacity duration-300">
+                        <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-3xl mb-4">
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
-                        <h3 class="font-serif font-bold text-2xl text-onyx-900 dark:text-white">Inquiry Transmitted!</h3>
-                        <p class="text-sm text-onyx-800/60 dark:text-onyx-400/60 mt-3 max-w-sm">
+                        <h3 class="font-serif font-bold text-2xl text-onyx-900">Inquiry Transmitted!</h3>
+                        <p class="text-sm text-onyx-800/60 mt-3 max-w-sm">
                             Thank you for reaching out. Liezel Ann Villanueva will review your requirements and respond within 24 business hours.
                         </p>
                         <button onclick="resetContactForm()" class="mt-6 px-6 py-2.5 bg-gold-500 text-white rounded-full text-xs font-semibold uppercase tracking-wider shadow-md hover:bg-orange-500 transition-colors">
@@ -645,17 +637,17 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-2">
                                 <label for="form-name" class="block text-xs uppercase tracking-widest font-semibold text-gold-500">Your Identity</label>
-                                <input type="text" id="form-name" required placeholder="Hiring Manager Name" class="w-full px-4 py-3.5 rounded-xl border border-gold-100 dark:border-onyx-800 bg-gold-50/20 dark:bg-onyx-900 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                                <input type="text" id="form-name" required placeholder="Hiring Manager Name" class="w-full px-4 py-3.5 rounded-xl border border-gold-100 bg-gold-50/20 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
                             </div>
                             <div class="space-y-2">
                                 <label for="form-email" class="block text-xs uppercase tracking-widest font-semibold text-gold-500">Corporate Email</label>
-                                <input type="email" id="form-email" required placeholder="manager@company.com" class="w-full px-4 py-3.5 rounded-xl border border-gold-100 dark:border-onyx-800 bg-gold-50/20 dark:bg-onyx-900 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                                <input type="email" id="form-email" required placeholder="manager@company.com" class="w-full px-4 py-3.5 rounded-xl border border-gold-100 bg-gold-50/20 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
                             </div>
                         </div>
 
                         <div class="space-y-2">
                             <label for="form-subject" class="block text-xs uppercase tracking-widest font-semibold text-gold-500">Project Type / Capacity</label>
-                            <select id="form-subject" class="w-full px-4 py-3.5 rounded-xl border border-gold-100 dark:border-onyx-800 bg-gold-50/20 dark:bg-onyx-900 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                            <select id="form-subject" class="w-full px-4 py-3.5 rounded-xl border border-gold-100 bg-gold-50/20 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
                                 <option value="Marketing Strategist Placement">Digital Marketing Specialist Roles</option>
                                 <option value="SEO Optimization Projects">SEO Audit & Site Growth Project</option>
                                 <option value="Customer Relations Management">Technical Customer Care Operations</option>
@@ -665,7 +657,7 @@
 
                         <div class="space-y-2">
                             <label for="form-message" class="block text-xs uppercase tracking-widest font-semibold text-gold-500">Role specifications / Project brief</label>
-                            <textarea id="form-message" required rows="4" placeholder="Briefly describe the candidate requirements..." class="w-full px-4 py-3.5 rounded-xl border border-gold-100 dark:border-onyx-800 bg-gold-50/20 dark:bg-onyx-900 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"></textarea>
+                            <textarea id="form-message" required rows="4" placeholder="Briefly describe the candidate requirements..." class="w-full px-4 py-3.5 rounded-xl border border-gold-100 bg-gold-50/20 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"></textarea>
                         </div>
 
                         <div class="pt-3">
@@ -681,60 +673,29 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white dark:bg-onyx-950 border-t border-gold-100 dark:border-onyx-900 py-12 relative no-print">
+    <footer class="bg-white border-t border-gold-100 py-12 relative no-print">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             <div class="flex items-center space-x-2">
                 <span class="gold-orange-gradient text-white font-serif font-bold w-10 h-10 flex items-center justify-center rounded-lg shadow-md">LV</span>
-                <span class="font-serif text-lg font-bold tracking-wide text-onyx-900 dark:text-white">
+                <span class="font-serif text-lg font-bold tracking-wide text-onyx-900">
                     Liezel Ann<span class="text-gold-500"> Villanueva</span>
                 </span>
             </div>
-            <p class="text-xs text-onyx-800/40 dark:text-onyx-400/40">
+            <p class="text-xs text-onyx-800/40">
                 &copy; 2026 Liezel Ann Villanueva. All rights reserved. Made with responsive Gold, White, & Orange themes.
             </p>
             <div class="flex space-x-4">
-                <a href="#home" class="text-xs text-onyx-800/60 dark:text-onyx-400/60 hover:text-gold-500 font-medium transition-colors">Home</a>
-                <span class="text-onyx-800/20 dark:text-onyx-800">|</span>
-                <a href="#experience" class="text-xs text-onyx-800/60 dark:text-onyx-400/60 hover:text-gold-500 font-medium transition-colors">Journey</a>
-                <span class="text-onyx-800/20 dark:text-onyx-800">|</span>
-                <button onclick="window.print()" class="text-xs text-onyx-800/60 dark:text-onyx-400/60 hover:text-gold-500 font-medium transition-colors">Print PDF</button>
+                <a href="#home" class="text-xs text-onyx-800/60 hover:text-gold-500 font-medium transition-colors">Home</a>
+                <span class="text-onyx-800/20">|</span>
+                <a href="#experience" class="text-xs text-onyx-800/60 hover:text-gold-500 font-medium transition-colors">Journey</a>
+                <span class="text-onyx-800/20">|</span>
+                <button onclick="window.print()" class="text-xs text-onyx-800/60 hover:text-gold-500 font-medium transition-colors">Print PDF</button>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script>
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-            updateThemeIcons(true);
-        } else {
-            document.documentElement.classList.remove('dark');
-            updateThemeIcons(false);
-        }
-
-        const btnToggle = document.getElementById('theme-toggle');
-        const btnToggleMobile = document.getElementById('theme-toggle-mobile');
-        btnToggle.addEventListener('click', toggleTheme);
-        btnToggleMobile.addEventListener('click', toggleTheme);
-
-        function toggleTheme() {
-            const isDark = document.documentElement.classList.toggle('dark');
-            localStorage.theme = isDark ? 'dark' : 'light';
-            updateThemeIcons(isDark);
-        }
-
-        function updateThemeIcons(isDark) {
-            const icon = document.getElementById('theme-toggle-icon');
-            const iconMobile = document.getElementById('theme-toggle-icon-mobile');
-            if (isDark) {
-                icon.className = 'fa-solid fa-sun text-lg';
-                iconMobile.className = 'fa-solid fa-sun';
-            } else {
-                icon.className = 'fa-solid fa-moon text-lg';
-                iconMobile.className = 'fa-solid fa-moon';
-            }
-        }
-
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
@@ -841,7 +802,7 @@
         function switchSkillTab(tabName) {
             const tabs = document.querySelectorAll('.skill-tab-btn');
             tabs.forEach(tab => {
-                tab.className = 'skill-tab-btn px-6 py-3 rounded-full font-semibold text-xs uppercase tracking-wider bg-white dark:bg-onyx-800 hover:bg-gold-50 border border-gold-100 text-onyx-800 dark:text-onyx-100 transition-all';
+                tab.className = 'skill-tab-btn px-6 py-3 rounded-full font-semibold text-xs uppercase tracking-wider bg-white hover:bg-gold-50 border border-gold-100 text-onyx-800 transition-all';
             });
 
             const activeTab = document.getElementById(`tab-${tabName}`);
@@ -853,12 +814,12 @@
             let html = '<div class="skill-group-card space-y-4">';
             for (let i = 0; i < Math.ceil(list.length / 2); i++) {
                 html += `
-                    <div class="p-6 bg-white dark:bg-onyx-950 rounded-2xl border border-gold-100/50 shadow-sm">
+                    <div class="p-6 bg-white rounded-2xl border border-gold-100/50 shadow-sm">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="font-medium text-onyx-900 dark:text-white text-sm">${list[i].name}</span>
+                            <span class="font-medium text-onyx-900 text-sm">${list[i].name}</span>
                             <span class="text-xs text-orange-500 font-semibold">${list[i].level}%</span>
                         </div>
-                        <div class="w-full h-2 bg-onyx-50 dark:bg-onyx-800 rounded-full overflow-hidden">
+                        <div class="w-full h-2 bg-onyx-50 rounded-full overflow-hidden">
                             <div class="h-full gold-orange-gradient" style="width: ${list[i].level}%"></div>
                         </div>
                     </div>`;
@@ -867,12 +828,12 @@
             
             for (let i = Math.ceil(list.length / 2); i < list.length; i++) {
                 html += `
-                    <div class="p-6 bg-white dark:bg-onyx-950 rounded-2xl border border-gold-100/50 shadow-sm">
+                    <div class="p-6 bg-white rounded-2xl border border-gold-100/50 shadow-sm">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="font-medium text-onyx-900 dark:text-white text-sm">${list[i].name}</span>
+                            <span class="font-medium text-onyx-900 text-sm">${list[i].name}</span>
                             <span class="text-xs text-orange-500 font-semibold">${list[i].level}%</span>
                         </div>
-                        <div class="w-full h-2 bg-onyx-50 dark:bg-onyx-800 rounded-full overflow-hidden">
+                        <div class="w-full h-2 bg-onyx-50 rounded-full overflow-hidden">
                             <div class="h-full gold-orange-gradient" style="width: ${list[i].level}%"></div>
                         </div>
                     </div>`;
@@ -912,7 +873,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -992,49 +952,45 @@
         }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #FDFCFA; }
-        .dark ::-webkit-scrollbar-track { background: #121212; }
         ::-webkit-scrollbar-thumb { background: #C59B27; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #FF6F00; }
         
         /* Interactive Media and PDF Rendering Styles */
         @media print {
             body { background: white !important; color: black !important; }
-            header, footer, #theme-toggle, #theme-toggle-mobile, #menu-btn, .no-print { display: none !important; }
+            header, footer, #menu-btn, .no-print { display: none !important; }
             .print-full-width { width: 100% !important; max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
             .print-card-break { break-inside: avoid; }
         }
     </style>
 </head>
-<body class="bg-[#FDFBF9] dark:bg-onyx-900 text-onyx-800 dark:text-onyx-50 font-sans transition-colors duration-300">
+<body class="bg-[#FDFBF9] text-onyx-800 font-sans transition-colors duration-300">
 
     <!-- Navigation Bar -->
-    <header id="navbar" class="fixed w-full top-0 left-0 z-50 transition-all duration-300 bg-white/80 dark:bg-onyx-900/80 backdrop-blur-md border-b border-gold-100/50 dark:border-onyx-800/50 no-print">
+    <header id="navbar" class="fixed w-full top-0 left-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gold-100/50 no-print">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#home" class="flex items-center space-x-2 group">
                 <span class="gold-orange-gradient text-white font-serif font-bold w-10 h-10 flex items-center justify-center rounded-lg shadow-md group-hover:scale-105 transition-transform">LV</span>
-                <span class="font-serif text-lg font-bold tracking-wide text-onyx-900 dark:text-white transition-colors">
+                <span class="font-serif text-lg font-bold tracking-wide text-onyx-900 transition-colors">
                     Liezel Ann<span class="text-gold-500"> Villanueva</span>
                 </span>
             </a>
 
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="#home" class="nav-link font-medium hover:text-gold-500 transition-colors text-gold-600 dark:text-gold-300">Home</a>
-                <a href="#about" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800 dark:text-onyx-100">About</a>
-                <a href="#skills" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800 dark:text-onyx-100">Skills</a>
-                <a href="#experience" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800 dark:text-onyx-100">Experience</a>
-                <a href="#education" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800 dark:text-onyx-100">Education</a>
-                <a href="#contact" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800 dark:text-onyx-100">Contact</a>
+                <a href="#home" class="nav-link font-medium hover:text-gold-500 transition-colors text-gold-600">Home</a>
+                <a href="#about" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800">About</a>
+                <a href="#skills" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800">Skills</a>
+                <a href="#experience" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800">Experience</a>
+                <a href="#education" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800">Education</a>
+                <a href="#contact" class="nav-link font-medium hover:text-gold-500 transition-colors text-onyx-800">Contact</a>
             </nav>
 
             <div class="hidden md:flex items-center space-x-4">
-                <a href="officialCV.pdf" download="officialCV.pdf" class="p-2.5 rounded-full hover:bg-gold-50 dark:hover:bg-onyx-800 text-gold-600 dark:text-gold-400 transition-all focus:outline-none" title="Download officialCV.pdf">
+                <a href="officialCV.pdf" target="_blank" class="p-2.5 rounded-full hover:bg-gold-50 text-gold-600 transition-all focus:outline-none" title="Open officialCV.pdf in a new tab">
                     <i class="fa-solid fa-file-pdf text-lg"></i>
                 </a>
-                <button onclick="window.print()" class="p-2.5 rounded-full hover:bg-gold-50 dark:hover:bg-onyx-800 text-gold-600 dark:text-gold-400 transition-all focus:outline-none" title="Print/Save Web Page as PDF">
+                <button onclick="window.print()" class="p-2.5 rounded-full hover:bg-gold-50 text-gold-600 transition-all focus:outline-none" title="Print/Save Web Page as PDF">
                     <i class="fa-solid fa-print text-lg"></i>
-                </button>
-                <button id="theme-toggle" class="p-2.5 rounded-full hover:bg-gold-50 dark:hover:bg-onyx-800 text-gold-500 dark:text-gold-400 transition-all focus:outline-none" aria-label="Toggle Theme">
-                    <i id="theme-toggle-icon" class="fa-solid fa-moon text-lg"></i>
                 </button>
                 <a href="#contact" class="px-5 py-2.5 text-xs font-semibold tracking-wider uppercase rounded-full gold-orange-gradient text-white hover:shadow-lg hover:shadow-orange-500/20 active:scale-95 transition-all">
                     Hire Me
@@ -1042,28 +998,25 @@
             </div>
 
             <div class="flex items-center space-x-3 md:hidden">
-                <a href="officialCV.pdf" download="officialCV.pdf" class="p-2 rounded-full hover:bg-gold-50 dark:hover:bg-onyx-800 text-gold-600" title="Download officialCV.pdf">
+                <a href="officialCV.pdf" target="_blank" class="p-2 rounded-full hover:bg-gold-50 text-gold-600" title="Open officialCV.pdf in a new tab">
                     <i class="fa-solid fa-file-pdf"></i>
                 </a>
-                <button onclick="window.print()" class="p-2 rounded-full hover:bg-gold-50 dark:hover:bg-onyx-800 text-gold-600" title="Print / PDF">
+                <button onclick="window.print()" class="p-2 rounded-full hover:bg-gold-50 text-gold-600" title="Print / PDF">
                     <i class="fa-solid fa-print"></i>
                 </button>
-                <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-gold-50 dark:hover:bg-onyx-800 text-gold-500 transition-all">
-                    <i id="theme-toggle-icon-mobile" class="fa-solid fa-moon"></i>
-                </button>
-                <button id="menu-btn" class="p-2 focus:outline-none text-onyx-800 dark:text-white" aria-label="Open Menu">
+                <button id="menu-btn" class="p-2 focus:outline-none text-onyx-800" aria-label="Open Menu">
                     <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 dark:bg-onyx-900/95 backdrop-blur-lg border-b border-gold-100/30 w-full absolute top-full left-0 py-6 px-8 flex flex-col space-y-4 shadow-xl">
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-b border-gold-100/30 w-full absolute top-full left-0 py-6 px-8 flex flex-col space-y-4 shadow-xl">
             <a href="#home" class="mobile-nav-link text-lg font-medium text-gold-500 py-1">Home</a>
-            <a href="#about" class="mobile-nav-link text-lg font-medium text-onyx-800 dark:text-onyx-100 py-1">About</a>
-            <a href="#skills" class="mobile-nav-link text-lg font-medium text-onyx-800 dark:text-onyx-100 py-1">Skills</a>
-            <a href="#experience" class="mobile-nav-link text-lg font-medium text-onyx-800 dark:text-onyx-100 py-1">Experience</a>
-            <a href="#education" class="mobile-nav-link text-lg font-medium text-onyx-800 dark:text-onyx-100 py-1">Education</a>
-            <a href="#contact" class="mobile-nav-link text-lg font-medium text-onyx-800 dark:text-onyx-100 py-1">Contact</a>
+            <a href="#about" class="mobile-nav-link text-lg font-medium text-onyx-800 py-1">About</a>
+            <a href="#skills" class="mobile-nav-link text-lg font-medium text-onyx-800 py-1">Skills</a>
+            <a href="#experience" class="mobile-nav-link text-lg font-medium text-onyx-800 py-1">Experience</a>
+            <a href="#education" class="mobile-nav-link text-lg font-medium text-onyx-800 py-1">Education</a>
+            <a href="#contact" class="mobile-nav-link text-lg font-medium text-onyx-800 py-1">Contact</a>
             <a href="#contact" class="w-full py-3 text-center font-semibold rounded-lg gold-orange-gradient text-white mt-4 block">
                 Let's Talk
             </a>
@@ -1071,15 +1024,15 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden bg-gradient-to-b from-[#FFFBF7] to-[#FDFBF9] dark:from-onyx-950 dark:to-onyx-900 print:min-h-0 print:py-10">
-        <div class="absolute top-1/4 left-10 w-72 h-72 rounded-full bg-gold-200/10 dark:bg-gold-500/5 blur-3xl animate-pulse-slow no-print"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-orange-300/10 dark:bg-orange-500/5 blur-3xl animate-float no-print"></div>
-        <div class="absolute inset-0 opacity-5 dark:opacity-[0.03] pointer-events-none no-print" style="background-image: radial-gradient(#C59B27 1px, transparent 1px); background-size: 32px 32px;"></div>
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden bg-gradient-to-b from-[#FFFBF7] to-[#FDFBF9] print:min-h-0 print:py-10">
+        <div class="absolute top-1/4 left-10 w-72 h-72 rounded-full bg-gold-200/10 blur-3xl animate-pulse-slow no-print"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-orange-300/10 blur-3xl animate-float no-print"></div>
+        <div class="absolute inset-0 opacity-5 pointer-events-none no-print" style="background-image: radial-gradient(#C59B27 1px, transparent 1px); background-size: 32px 32px;"></div>
 
         <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 w-full print-full-width">
             
             <div class="lg:col-span-7 space-y-8 text-center lg:text-left reveal-element active print-full-width print:text-left">
-                <div class="inline-flex items-center space-x-2 bg-orange-50 dark:bg-orange-950/30 border border-orange-200/50 dark:border-orange-800/30 px-5 py-2 rounded-full text-orange-600 dark:text-orange-400 font-semibold text-xs uppercase tracking-widest no-print">
+                <div class="inline-flex items-center space-x-2 bg-orange-50 border border-orange-200/50 px-5 py-2 rounded-full text-orange-600 font-semibold text-xs uppercase tracking-widest no-print">
                     <span class="flex h-2.5 w-2.5 relative">
                       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
                       <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-orange-500"></span>
@@ -1087,16 +1040,16 @@
                     <span>Marketing & Customer Experience Professional</span>
                 </div>
                 
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-onyx-900 dark:text-white leading-tight">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-onyx-900 leading-tight">
                     Strategic, Analytical & <br>
                     <span class="gold-orange-text">Dependable Results</span>
                 </h1>
                 
-                <p class="text-lg md:text-xl font-light text-onyx-800/80 dark:text-onyx-200/80 max-w-xl mx-auto lg:mx-0 leading-relaxed print:text-black">
+                <p class="text-lg md:text-xl font-light text-onyx-800/80 max-w-xl mx-auto lg:mx-0 leading-relaxed print:text-black">
                     I am Liezel Ann Villanueva, a Business Administration graduate majoring in Marketing Management. I coordinate results-driven marketing strategies, SEO setups, and premier customer experiences.
                 </p>
 
-                <div class="h-8 flex justify-center lg:justify-start items-center space-x-2 text-md font-mono text-gold-600 dark:text-gold-400 no-print">
+                <div class="h-8 flex justify-center lg:justify-start items-center space-x-2 text-md font-mono text-gold-600 no-print">
                     <span class="fa-solid fa-bullseye text-orange-500"></span>
                     <span id="typing-text" class="border-r-2 border-orange-500 pr-1 font-semibold"></span>
                 </div>
@@ -1105,49 +1058,49 @@
                     <a href="#experience" class="px-8 py-4 rounded-full font-semibold gold-orange-gradient text-white shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 hover:scale-[1.02] active:scale-95 transition-all">
                         View Work Experience
                     </a>
-                    <!-- Direct Static Link to officialCV.pdf with download tag -->
-                    <a href="officialCV.pdf" download="officialCV.pdf" class="px-8 py-4 rounded-full font-semibold border-2 border-gold-500/40 hover:border-gold-500 text-onyx-800 dark:text-white hover:bg-gold-500/5 transition-all flex items-center justify-center" title="Click to download Liezel Ann Villanueva's officialCV.pdf">
+                    <!-- Direct Static Link to officialCV.pdf configured to open in a new tab -->
+                    <a href="officialCV.pdf" target="_blank" class="px-8 py-4 rounded-full font-semibold border-2 border-gold-500/40 hover:border-gold-500 text-onyx-800 hover:bg-gold-500/5 transition-all flex items-center justify-center" title="Click to view Liezel Ann Villanueva's officialCV.pdf in a new tab">
                         <i class="fa-solid fa-file-pdf mr-2 text-orange-500"></i> <span>Get PDF CV</span>
                     </a>
                 </div>
 
                 <!-- Contact Info - Improved Spacing -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-gold-200/30 dark:border-onyx-800/50">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-gold-200/30">
                     <div class="group">
                         <div class="flex items-center space-x-2 mb-2">
-                            <span class="w-9 h-9 rounded-lg bg-gold-100 dark:bg-gold-950/40 flex items-center justify-center text-gold-500 group-hover:scale-110 transition-transform">
+                            <span class="w-9 h-9 rounded-lg bg-gold-100 flex items-center justify-center text-gold-500 group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-phone text-xs"></i>
                             </span>
-                            <p class="text-[10px] tracking-wider text-onyx-800/50 dark:text-onyx-400/50 uppercase font-semibold">Phone</p>
+                            <p class="text-[10px] tracking-wider text-onyx-800/50 uppercase font-semibold">Phone</p>
                         </div>
-                        <a href="tel:+639163961196" class="text-sm font-semibold text-onyx-900 dark:text-white hover:text-gold-500 transition-colors block">+63 916 396 1196</a>
+                        <a href="tel:+639163961196" class="text-sm font-semibold text-onyx-900 hover:text-gold-500 transition-colors block">+63 916 396 1196</a>
                     </div>
                     <div class="group">
                         <div class="flex items-center space-x-2 mb-2">
-                            <span class="w-9 h-9 rounded-lg bg-orange-100 dark:bg-orange-950/40 flex items-center justify-center text-orange-500 group-hover:scale-110 transition-transform">
+                            <span class="w-9 h-9 rounded-lg bg-orange-100 flex items-center justify-center text-orange-500 group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-envelope text-xs"></i>
                             </span>
-                            <p class="text-[10px] tracking-wider text-onyx-800/50 dark:text-onyx-400/50 uppercase font-semibold">Email</p>
+                            <p class="text-[10px] tracking-wider text-onyx-800/50 uppercase font-semibold">Email</p>
                         </div>
-                        <a href="mailto:monteroanya24@gmail.com" class="text-sm font-semibold text-onyx-900 dark:text-white hover:text-gold-500 transition-colors block break-all">monteroanya24@gmail.com</a>
+                        <a href="mailto:monteroanya24@gmail.com" class="text-sm font-semibold text-onyx-900 hover:text-gold-500 transition-colors block break-all">monteroanya24@gmail.com</a>
                     </div>
                     <div class="group">
                         <div class="flex items-center space-x-2 mb-2">
-                            <span class="w-9 h-9 rounded-lg bg-gold-100 dark:bg-gold-950/40 flex items-center justify-center text-gold-500 group-hover:scale-110 transition-transform">
+                            <span class="w-9 h-9 rounded-lg bg-gold-100 flex items-center justify-center text-gold-500 group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-location-dot text-xs"></i>
                             </span>
-                            <p class="text-[10px] tracking-wider text-onyx-800/50 dark:text-onyx-400/50 uppercase font-semibold">Location</p>
+                            <p class="text-[10px] tracking-wider text-onyx-800/50 uppercase font-semibold">Location</p>
                         </div>
-                        <p class="text-sm font-semibold text-onyx-900 dark:text-white">Davao City, PH</p>
+                        <p class="text-sm font-semibold text-onyx-900">Davao City, PH</p>
                     </div>
                     <div class="group">
                         <div class="flex items-center space-x-2 mb-2">
-                            <span class="w-9 h-9 rounded-lg bg-orange-100 dark:bg-orange-950/40 flex items-center justify-center text-orange-500 group-hover:scale-110 transition-transform">
+                            <span class="w-9 h-9 rounded-lg bg-orange-100 flex items-center justify-center text-orange-500 group-hover:scale-110 transition-transform">
                                 <i class="fa-brands fa-linkedin-in text-xs"></i>
                             </span>
-                            <p class="text-[10px] tracking-wider text-onyx-800/50 dark:text-onyx-400/50 uppercase font-semibold">LinkedIn</p>
+                            <p class="text-[10px] tracking-wider text-onyx-800/50 uppercase font-semibold">LinkedIn</p>
                         </div>
-                        <p class="text-sm font-semibold text-onyx-900 dark:text-white">Liezel Ann Villanueva</p>
+                        <p class="text-sm font-semibold text-onyx-900">Liezel Ann Villanueva</p>
                     </div>
                 </div>
             </div>
@@ -1156,12 +1109,12 @@
             <div class="lg:col-span-5 flex justify-center relative reveal-element active print:block print:max-w-xs">
                 <div class="absolute -inset-4 rounded-3xl border border-gold-500/30 max-w-[360px] aspect-[4/5] mx-auto w-full pointer-events-none transform translate-x-2 translate-y-2 no-print"></div>
                 
-                <div class="relative w-full max-w-[360px] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl group border-4 border-white dark:border-onyx-800 bg-[#E7E7E7]">
+                <div class="relative w-full max-w-[360px] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl group border-4 border-white bg-[#E7E7E7]">
                     <img id="profile-img" src="images/profile-placeholder.jpg" 
                          alt="Liezel Ann Villanueva Profile" 
                          class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-onyx-900 via-transparent to-transparent opacity-50 no-print"></div>
-                    <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/10 dark:bg-onyx-900/40 backdrop-blur-md border border-white/20 dark:border-onyx-800/30 text-white flex items-center justify-between no-print">
+                    <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-between no-print">
                         <div>
                             <p class="text-[10px] tracking-wider text-gold-300 uppercase">Current Station</p>
                             <p class="font-serif font-bold text-sm text-white">Tugbok Dist, Davao City</p>
@@ -1177,61 +1130,61 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-white dark:bg-onyx-950 relative print:py-6">
+    <section id="about" class="py-24 bg-white relative print:py-6">
         <div class="max-w-7xl mx-auto px-6 print-full-width">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal-element print:text-left print:mb-6">
                 <span class="text-gold-500 font-semibold tracking-widest text-xs uppercase block mb-3">My Profile</span>
-                <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 dark:text-white print:text-2xl">About Liezel Ann</h2>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 print:text-2xl">About Liezel Ann</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-gold-500 to-orange-500 mx-auto mt-5 rounded-full print:hidden"></div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center print-full-width">
                 <div class="lg:col-span-6 space-y-6 reveal-element print-full-width">
-                    <h3 class="text-2xl font-serif text-onyx-900 dark:text-white print:text-xl">
+                    <h3 class="text-2xl font-serif text-onyx-900 print:text-xl">
                         A Dedicated <span class="text-gold-500">Strategist & Executive Associate</span>
                     </h3>
-                    <p class="text-onyx-800/70 dark:text-onyx-200/70 leading-relaxed font-light print:text-black">
+                    <p class="text-onyx-800/70 leading-relaxed font-light print:text-black">
                         I am an analytical, responsible, and highly organized business graduate with an absolute commitment to quality work. Backed by solid background in customer technical systems support, marketing management concepts, and search engine optimization (SEO), I quickly align with dynamic team objectives.
                     </p>
-                    <p class="text-onyx-800/70 dark:text-onyx-200/70 leading-relaxed font-light print:text-black">
+                    <p class="text-onyx-800/70 leading-relaxed font-light print:text-black">
                         My approach merges systematic marketing operations with transparent, powerful communication. Over the course of 3 productive years representing top companies in Davao (including Amazon and Technical support wings), I developed a client-oriented mindset that ensures dependable support pipelines.
                     </p>
-                    <div class="border-l-4 border-orange-500 pl-5 py-3 italic text-onyx-800/80 dark:text-onyx-100/80 print:text-black print:border-gold-500">
+                    <div class="border-l-4 border-orange-500 pl-5 py-3 italic text-onyx-800/80 print:text-black print:border-gold-500">
                         "Reliable execution is the core of every great corporate partnership."
                     </div>
                 </div>
 
                 <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6 reveal-element print:grid-cols-2">
-                    <div class="bg-gradient-to-br from-gold-50/50 to-white dark:from-onyx-900 dark:to-onyx-950 p-6 rounded-2xl border border-gold-200/20 shadow-sm print:border-neutral-300 print:p-4">
-                        <div class="w-12 h-12 rounded-xl bg-gold-100 dark:bg-gold-950/40 flex items-center justify-center text-gold-600 mb-4 print:hidden">
+                    <div class="bg-gradient-to-br from-gold-50/50 to-white p-6 rounded-2xl border border-gold-200/20 shadow-sm print:border-neutral-300 print:p-4">
+                        <div class="w-12 h-12 rounded-xl bg-gold-100 flex items-center justify-center text-gold-600 mb-4 print:hidden">
                             <i class="fa-solid fa-chess-knight text-lg"></i>
                         </div>
-                        <h4 class="font-serif font-bold text-md text-onyx-900 dark:text-white mb-2">Strategist</h4>
-                        <p class="text-xs text-onyx-800/60 dark:text-onyx-400/60 leading-relaxed print:text-black">Formulates creative digital campaigns, structured sales frameworks, and long-term search engine goals.</p>
+                        <h4 class="font-serif font-bold text-md text-onyx-900 mb-2">Strategist</h4>
+                        <p class="text-xs text-onyx-800/60 leading-relaxed print:text-black">Formulates creative digital campaigns, structured sales frameworks, and long-term search engine goals.</p>
                     </div>
 
-                    <div class="bg-gradient-to-br from-orange-50/50 to-white dark:from-onyx-900 dark:to-onyx-950 p-6 rounded-2xl border border-orange-200/20 shadow-sm print:border-neutral-300 print:p-4">
-                        <div class="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-950/40 flex items-center justify-center text-orange-500 mb-4 print:hidden">
+                    <div class="bg-gradient-to-br from-orange-50/50 to-white p-6 rounded-2xl border border-orange-200/20 shadow-sm print:border-neutral-300 print:p-4">
+                        <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-orange-500 mb-4 print:hidden">
                             <i class="fa-solid fa-comments text-lg"></i>
                         </div>
-                        <h4 class="font-serif font-bold text-md text-onyx-900 dark:text-white mb-2">Excellent Communicator</h4>
-                        <p class="text-xs text-onyx-800/60 dark:text-onyx-400/60 leading-relaxed print:text-black">Fluent in English and Tagalog; provides empathetic technical support and high-conversion client communication.</p>
+                        <h4 class="font-serif font-bold text-md text-onyx-900 mb-2">Excellent Communicator</h4>
+                        <p class="text-xs text-onyx-800/60 leading-relaxed print:text-black">Fluent in English and Tagalog; provides empathetic technical support and high-conversion client communication.</p>
                     </div>
 
-                    <div class="bg-gradient-to-br from-orange-50/50 to-white dark:from-onyx-900 dark:to-onyx-950 p-6 rounded-2xl border border-orange-200/20 shadow-sm print:border-neutral-300 print:p-4">
-                        <div class="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-950/40 flex items-center justify-center text-orange-500 mb-4 print:hidden">
+                    <div class="bg-gradient-to-br from-orange-50/50 to-white p-6 rounded-2xl border border-orange-200/20 shadow-sm print:border-neutral-300 print:p-4">
+                        <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-orange-500 mb-4 print:hidden">
                             <i class="fa-solid fa-chart-line text-lg"></i>
                         </div>
-                        <h4 class="font-serif font-bold text-md text-onyx-900 dark:text-white mb-2">Analytical & Organized</h4>
-                        <p class="text-xs text-onyx-800/60 dark:text-onyx-400/60 leading-relaxed print:text-black">Translates website metrics, competitor performance, and workflow logs into optimized systems.</p>
+                        <h4 class="font-serif font-bold text-md text-onyx-900 mb-2">Analytical & Organized</h4>
+                        <p class="text-xs text-onyx-800/60 leading-relaxed print:text-black">Translates website metrics, competitor performance, and workflow logs into optimized systems.</p>
                     </div>
 
-                    <div class="bg-gradient-to-br from-gold-50/50 to-white dark:from-onyx-900 dark:to-onyx-950 p-6 rounded-2xl border border-gold-200/20 shadow-sm print:border-neutral-300 print:p-4">
-                        <div class="w-12 h-12 rounded-xl bg-gold-100 dark:bg-gold-950/40 flex items-center justify-center text-gold-600 mb-4 print:hidden">
+                    <div class="bg-gradient-to-br from-gold-50/50 to-white p-6 rounded-2xl border border-gold-200/20 shadow-sm print:border-neutral-300 print:p-4">
+                        <div class="w-12 h-12 rounded-xl bg-gold-100 flex items-center justify-center text-gold-600 mb-4 print:hidden">
                             <i class="fa-solid fa-circle-check text-lg"></i>
                         </div>
-                        <h4 class="font-serif font-bold text-md text-onyx-900 dark:text-white mb-2">Dependable & Responsible</h4>
-                        <p class="text-xs text-onyx-800/60 dark:text-onyx-400/60 leading-relaxed print:text-black">Always delivers on-schedule with standard executive accountability and precise administrative alignment.</p>
+                        <h4 class="font-serif font-bold text-md text-onyx-900 mb-2">Dependable & Responsible</h4>
+                        <p class="text-xs text-onyx-800/60 leading-relaxed print:text-black">Always delivers on-schedule with standard executive accountability and precise administrative alignment.</p>
                     </div>
                 </div>
             </div>
@@ -1239,11 +1192,11 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-24 bg-[#FFFBF7] dark:bg-onyx-900 relative print:py-6">
+    <section id="skills" class="py-24 bg-[#FFFBF7] relative print:py-6">
         <div class="max-w-7xl mx-auto px-6 print-full-width">
             <div class="text-center max-w-3xl mx-auto mb-12 reveal-element print:text-left print:mb-6">
                 <span class="text-orange-500 font-semibold tracking-widest text-xs uppercase block mb-3">Abilities</span>
-                <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 dark:text-white print:text-2xl">Core Professional Skills</h2>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 print:text-2xl">Core Professional Skills</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-gold-500 to-orange-500 mx-auto mt-5 rounded-full print:hidden"></div>
             </div>
 
@@ -1251,51 +1204,51 @@
                 <button onclick="switchSkillTab('marketing')" id="tab-marketing" class="skill-tab-btn px-6 py-3 rounded-full font-semibold text-xs uppercase tracking-wider gold-orange-gradient text-white shadow-md transition-all">
                     Marketing & SEO
                 </button>
-                <button onclick="switchSkillTab('operations')" id="tab-operations" class="skill-tab-btn px-6 py-3 rounded-full font-semibold text-xs uppercase tracking-wider bg-white dark:bg-onyx-800 hover:bg-gold-50 border border-gold-100 text-onyx-800 dark:text-onyx-100 transition-all">
+                <button onclick="switchSkillTab('operations')" id="tab-operations" class="skill-tab-btn px-6 py-3 rounded-full font-semibold text-xs uppercase tracking-wider bg-white hover:bg-gold-50 border border-gold-100 text-onyx-800 transition-all">
                     Operations & Communication
                 </button>
-                <button onclick="switchSkillTab('personal')" id="tab-personal" class="skill-tab-btn px-6 py-3 rounded-full font-semibold text-xs uppercase tracking-wider bg-white dark:bg-onyx-800 hover:bg-gold-50 border border-gold-100 text-onyx-800 dark:text-onyx-100 transition-all">
+                <button onclick="switchSkillTab('personal')" id="tab-personal" class="skill-tab-btn px-6 py-3 rounded-full font-semibold text-xs uppercase tracking-wider bg-white hover:bg-gold-50 border border-gold-100 text-onyx-800 transition-all">
                     Languages & Systems
                 </button>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal-element print:grid-cols-2" id="skill-display">
                 <div class="skill-group-card space-y-4">
-                    <div class="p-6 bg-white dark:bg-onyx-950 rounded-2xl border border-gold-100/50 shadow-sm print:p-3 print:border-neutral-200">
+                    <div class="p-6 bg-white rounded-2xl border border-gold-100/50 shadow-sm print:p-3 print:border-neutral-200">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="font-medium text-onyx-900 dark:text-white text-sm">Marketing Strategy & Funnel Design</span>
+                            <span class="font-medium text-onyx-900 text-sm">Marketing Strategy & Funnel Design</span>
                             <span class="text-xs text-orange-500 font-semibold">95%</span>
                         </div>
-                        <div class="w-full h-2 bg-onyx-50 dark:bg-onyx-800 rounded-full overflow-hidden print:bg-neutral-200">
+                        <div class="w-full h-2 bg-onyx-50 rounded-full overflow-hidden print:bg-neutral-200">
                             <div class="h-full gold-orange-gradient" style="width: 95%"></div>
                         </div>
                     </div>
-                    <div class="p-6 bg-white dark:bg-onyx-950 rounded-2xl border border-gold-100/50 shadow-sm print:p-3 print:border-neutral-200">
+                    <div class="p-6 bg-white rounded-2xl border border-gold-100/50 shadow-sm print:p-3 print:border-neutral-200">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="font-medium text-onyx-900 dark:text-white text-sm">SEO Search Engine Optimization (Codeweeb)</span>
+                            <span class="font-medium text-onyx-900 text-sm">SEO Search Engine Optimization (Codeweeb)</span>
                             <span class="text-xs text-orange-500 font-semibold">90%</span>
                         </div>
-                        <div class="w-full h-2 bg-onyx-50 dark:bg-onyx-800 rounded-full overflow-hidden print:bg-neutral-200">
+                        <div class="w-full h-2 bg-onyx-50 rounded-full overflow-hidden print:bg-neutral-200">
                             <div class="h-full gold-orange-gradient" style="width: 90%"></div>
                         </div>
                     </div>
                 </div>
                 <div class="skill-group-card space-y-4">
-                    <div class="p-6 bg-white dark:bg-onyx-950 rounded-2xl border border-gold-100/50 shadow-sm print:p-3 print:border-neutral-200">
+                    <div class="p-6 bg-white rounded-2xl border border-gold-100/50 shadow-sm print:p-3 print:border-neutral-200">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="font-medium text-onyx-900 dark:text-white text-sm">Market Research & Competitive Analysis</span>
+                            <span class="font-medium text-onyx-900 text-sm">Market Research & Competitive Analysis</span>
                             <span class="text-xs text-orange-500 font-semibold">92%</span>
                         </div>
-                        <div class="w-full h-2 bg-onyx-50 dark:bg-onyx-800 rounded-full overflow-hidden print:bg-neutral-200">
+                        <div class="w-full h-2 bg-onyx-50 rounded-full overflow-hidden print:bg-neutral-200">
                             <div class="h-full gold-orange-gradient" style="width: 92%"></div>
                         </div>
                     </div>
-                    <div class="p-6 bg-white dark:bg-onyx-950 rounded-2xl border border-gold-100/50 shadow-sm print:p-3 print:border-neutral-200">
+                    <div class="p-6 bg-white rounded-2xl border border-gold-100/50 shadow-sm print:p-3 print:border-neutral-200">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="font-medium text-onyx-900 dark:text-white text-sm">Digital Advertising (Social / Search Ads)</span>
+                            <span class="font-medium text-onyx-900 text-sm">Digital Advertising (Social / Search Ads)</span>
                             <span class="text-xs text-orange-500 font-semibold">88%</span>
                         </div>
-                        <div class="w-full h-2 bg-onyx-50 dark:bg-onyx-800 rounded-full overflow-hidden print:bg-neutral-200">
+                        <div class="w-full h-2 bg-onyx-50 rounded-full overflow-hidden print:bg-neutral-200">
                             <div class="h-full gold-orange-gradient" style="width: 88%"></div>
                         </div>
                     </div>
@@ -1319,11 +1272,11 @@
     </section>
 
     <!-- Work Experience Section -->
-    <section id="experience" class="py-24 bg-white dark:bg-onyx-950 relative print:py-6">
+    <section id="experience" class="py-24 bg-white relative print:py-6">
         <div class="max-w-7xl mx-auto px-6 print-full-width">
             <div class="text-center max-w-3xl mx-auto mb-20 reveal-element print:text-left print:mb-6">
                 <span class="text-gold-500 font-semibold tracking-widest text-xs uppercase block mb-3">Professional Journey</span>
-                <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 dark:text-white print:text-2xl">Employment History</h2>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 print:text-2xl">Employment History</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-gold-500 to-orange-500 mx-auto mt-5 rounded-full print:hidden"></div>
             </div>
 
@@ -1332,20 +1285,20 @@
 
                 <!-- Job 1: SEO Specialist -->
                 <div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-16 reveal-element print:block print:mb-6 print-card-break">
-                    <div class="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white dark:bg-onyx-900 border-4 border-gold-500 z-10 flex items-center justify-center no-print">
+                    <div class="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white border-4 border-gold-500 z-10 flex items-center justify-center no-print">
                         <span class="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
                     </div>
                     <div class="hidden md:block text-right self-center print:hidden">
                         <span class="text-lg font-serif font-bold text-gold-500 tracking-wide">SEO Specialist</span>
-                        <p class="text-xs text-onyx-800/40 dark:text-onyx-400/60 uppercase tracking-widest font-semibold mt-1">Codeweeb Company</p>
+                        <p class="text-xs text-onyx-800/40 uppercase tracking-widest font-semibold mt-1">Codeweeb Company</p>
                     </div>
-                    <div class="p-8 bg-gradient-to-br from-[#FFFBF7] to-white dark:from-onyx-900 dark:to-onyx-950 border border-gold-100/50 dark:border-onyx-800/50 rounded-2xl shadow-sm hover:shadow-md transition-all print:border-none print:p-0 print:bg-none">
+                    <div class="p-8 bg-gradient-to-br from-[#FFFBF7] to-white border border-gold-100/50 rounded-2xl shadow-sm hover:shadow-md transition-all print:border-none print:p-0 print:bg-none">
                         <div class="flex justify-between items-start print:block">
-                            <h3 class="font-serif font-bold text-xl text-onyx-900 dark:text-white print:text-base">SEO Specialist</h3>
-                            <span class="text-xs font-semibold text-gold-600 dark:text-gold-400 print:text-black">Codeweeb Company</span>
+                            <h3 class="font-serif font-bold text-xl text-onyx-900 print:text-base">SEO Specialist</h3>
+                            <span class="text-xs font-semibold text-gold-600 print:text-black">Codeweeb Company</span>
                         </div>
                         <p class="text-xs text-orange-500 mt-2 print:text-black font-semibold">Technical Optimization & Traffic Strategist</p>
-                        <ul class="text-xs text-onyx-800/60 dark:text-onyx-400/60 mt-4 leading-relaxed list-disc list-inside space-y-2 print:text-black">
+                        <ul class="text-xs text-onyx-800/60 mt-4 leading-relaxed list-disc list-inside space-y-2 print:text-black">
                             <li>Orchestrated key on-page SEO frameworks and content matrices to drive targeted consumer traffic.</li>
                             <li>Monitored keyword performance algorithms, backlink metrics, and competitor ranking systems.</li>
                             <li>Ensured web optimization layouts conformed strictly with marketing management priorities.</li>
@@ -1355,16 +1308,16 @@
 
                 <!-- Job 2: Personal Assistant -->
                 <div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-16 reveal-element print:block print:mb-6 print-card-break">
-                    <div class="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white dark:bg-onyx-900 border-4 border-orange-500 z-10 flex items-center justify-center no-print">
+                    <div class="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white border-4 border-orange-500 z-10 flex items-center justify-center no-print">
                         <span class="w-1.5 h-1.5 bg-gold-500 rounded-full"></span>
                     </div>
-                    <div class="p-8 bg-gradient-to-br from-[#FFFBF7] to-white dark:from-onyx-900 dark:to-onyx-950 border border-gold-100/50 dark:border-onyx-800/50 rounded-2xl shadow-sm hover:shadow-md transition-all text-left print:border-none print:p-0 print:bg-none">
+                    <div class="p-8 bg-gradient-to-br from-[#FFFBF7] to-white border border-gold-100/50 rounded-2xl shadow-sm hover:shadow-md transition-all text-left print:border-none print:p-0 print:bg-none">
                         <div class="flex justify-between items-start print:block">
-                            <h3 class="font-serif font-bold text-xl text-onyx-900 dark:text-white print:text-base">Personal Assistant</h3>
-                            <span class="text-xs font-semibold text-orange-600 dark:text-orange-400 print:text-black">Gogreen Manufacturer Co.</span>
+                            <h3 class="font-serif font-bold text-xl text-onyx-900 print:text-base">Personal Assistant</h3>
+                            <span class="text-xs font-semibold text-orange-600 print:text-black">Gogreen Manufacturer Co.</span>
                         </div>
                         <p class="text-xs text-gold-500 mt-2 print:text-black font-semibold">Executive Support & Administrative Operations</p>
-                        <ul class="text-xs text-onyx-800/60 dark:text-onyx-400/60 mt-4 leading-relaxed list-disc list-inside space-y-2 print:text-black">
+                        <ul class="text-xs text-onyx-800/60 mt-4 leading-relaxed list-disc list-inside space-y-2 print:text-black">
                             <li>Managed complex schedules, supplier correspondences, inventory status trackers, and logistics routing.</li>
                             <li>Drafted official business presentations, communications, and internal corporate coordination summaries.</li>
                             <li>Identified procedural bottlenecks to secure organized, highly dependable business reporting channels.</li>
@@ -1372,39 +1325,39 @@
                     </div>
                     <div class="hidden md:block self-center print:hidden">
                         <span class="text-lg font-serif font-bold text-orange-500 tracking-wide">Personal Assistant</span>
-                        <p class="text-xs text-onyx-800/40 dark:text-onyx-400/60 uppercase tracking-widest font-semibold mt-1">Gogreen Manufacturer</p>
+                        <p class="text-xs text-onyx-800/40 uppercase tracking-widest font-semibold mt-1">Gogreen Manufacturer</p>
                     </div>
                 </div>
 
                 <!-- Job 3: Call Center -->
                 <div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-16 reveal-element print:block print:mb-6 print-card-break">
-                    <div class="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white dark:bg-onyx-900 border-4 border-gold-500 z-10 flex items-center justify-center no-print">
+                    <div class="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-white border-4 border-gold-500 z-10 flex items-center justify-center no-print">
                         <span class="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
                     </div>
                     <div class="hidden md:block text-right self-center print:hidden">
                         <span class="text-lg font-serif font-bold text-gold-500 tracking-wide">Customer Support Specialist</span>
-                        <p class="text-xs text-onyx-800/40 dark:text-onyx-400/60 uppercase tracking-widest font-semibold mt-1">3 Davao Companies • 3 Years</p>
+                        <p class="text-xs text-onyx-800/40 uppercase tracking-widest font-semibold mt-1">3 Davao Companies • 3 Years</p>
                     </div>
-                    <div class="p-8 bg-gradient-to-br from-[#FFFBF7] to-white dark:from-onyx-900 dark:to-onyx-950 border border-gold-100/50 dark:border-onyx-800/50 rounded-2xl shadow-sm hover:shadow-md transition-all print:border-none print:p-0 print:bg-none">
+                    <div class="p-8 bg-gradient-to-br from-[#FFFBF7] to-white border border-gold-100/50 rounded-2xl shadow-sm hover:shadow-md transition-all print:border-none print:p-0 print:bg-none">
                         <div class="flex justify-between items-start print:block">
-                            <h3 class="font-serif font-bold text-xl text-onyx-900 dark:text-white print:text-base">Call Center Representative</h3>
-                            <span class="text-xs font-semibold text-gold-600 dark:text-gold-400 print:text-black">3 Davao Offices (3 Years Total)</span>
+                            <h3 class="font-serif font-bold text-xl text-onyx-900 print:text-base">Call Center Representative</h3>
+                            <span class="text-xs font-semibold text-gold-600 print:text-black">3 Davao Offices (3 Years Total)</span>
                         </div>
                         <div class="mt-5 space-y-5">
                             <div class="border-l-2 border-gold-500 pl-4">
-                                <h4 class="font-bold text-xs text-onyx-900 dark:text-white">Amazon</h4>
+                                <h4 class="font-bold text-xs text-onyx-900">Amazon</h4>
                                 <p class="text-[11px] text-orange-500 font-medium">Retail Representative</p>
-                                <p class="text-[11px] text-onyx-800/60 dark:text-onyx-400/60 mt-2 leading-relaxed print:text-black">Managed complex retail accounts, purchase inquiries, billing adjustments, and premium customer retention solutions.</p>
+                                <p class="text-[11px] text-onyx-800/60 mt-2 leading-relaxed print:text-black">Managed complex retail accounts, purchase inquiries, billing adjustments, and premium customer retention solutions.</p>
                             </div>
                             <div class="border-l-2 border-orange-500 pl-4">
-                                <h4 class="font-bold text-xs text-onyx-900 dark:text-white">VXI</h4>
+                                <h4 class="font-bold text-xs text-onyx-900">VXI</h4>
                                 <p class="text-[11px] text-orange-500 font-medium">Technical Support Representative</p>
-                                <p class="text-[11px] text-onyx-800/60 dark:text-onyx-400/60 mt-2 leading-relaxed print:text-black">Resolved critical hardware, software configuration, and line connectivity errors under strict SLA targets.</p>
+                                <p class="text-[11px] text-onyx-800/60 mt-2 leading-relaxed print:text-black">Resolved critical hardware, software configuration, and line connectivity errors under strict SLA targets.</p>
                             </div>
                             <div class="border-l-2 border-gold-500 pl-4">
-                                <h4 class="font-bold text-xs text-onyx-900 dark:text-white">Ibex</h4>
+                                <h4 class="font-bold text-xs text-onyx-900">Ibex</h4>
                                 <p class="text-[11px] text-orange-500 font-medium">Chat Support Representative</p>
-                                <p class="text-[11px] text-onyx-800/60 dark:text-onyx-400/60 mt-2 leading-relaxed print:text-black">Provided real-time parallel support chat sessions maintaining high satisfaction ratings and accurate spelling/grammar.</p>
+                                <p class="text-[11px] text-onyx-800/60 mt-2 leading-relaxed print:text-black">Provided real-time parallel support chat sessions maintaining high satisfaction ratings and accurate spelling/grammar.</p>
                             </div>
                         </div>
                     </div>
@@ -1414,43 +1367,43 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-24 bg-[#FFFBF7] dark:bg-onyx-900 relative print:py-6">
+    <section id="education" class="py-24 bg-[#FFFBF7] relative print:py-6">
         <div class="max-w-7xl mx-auto px-6 print-full-width">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal-element print:text-left print:mb-6">
                 <span class="text-orange-500 font-semibold tracking-widest text-xs uppercase block mb-3">Qualifications</span>
-                <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 dark:text-white print:text-2xl">Academic Credentials</h2>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 print:text-2xl">Academic Credentials</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-gold-500 to-orange-500 mx-auto mt-5 rounded-full print:hidden"></div>
             </div>
 
-            <div class="max-w-3xl mx-auto bg-white dark:bg-onyx-950 rounded-3xl p-10 border border-gold-100/40 dark:border-onyx-800/40 shadow-lg relative overflow-hidden print:border-none print:p-0 print:shadow-none print:bg-none">
+            <div class="max-w-3xl mx-auto bg-white rounded-3xl p-10 border border-gold-100/40 shadow-lg relative overflow-hidden print:border-none print:p-0 print:shadow-none print:bg-none">
                 <div class="absolute -right-10 -bottom-10 opacity-5 text-gold-500 text-9xl font-serif no-print">BSBA</div>
-                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 border-b border-gold-100 dark:border-onyx-800/50 pb-7 print:border-b print:border-black print:pb-2">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 border-b border-gold-100 pb-7 print:border-b print:border-black print:pb-2">
                     <div>
-                        <h3 class="text-2xl font-serif font-bold text-onyx-900 dark:text-white print:text-lg">Bachelor of Science in Business Administration</h3>
+                        <h3 class="text-2xl font-serif font-bold text-onyx-900 print:text-lg">Bachelor of Science in Business Administration</h3>
                         <p class="text-md font-semibold text-gold-500 mt-2">Major in Marketing Management</p>
                     </div>
-                    <div class="bg-gold-50 dark:bg-gold-950/40 px-5 py-3 rounded-xl text-center border border-gold-200/30 print:border-none print:p-0">
+                    <div class="bg-gold-50 px-5 py-3 rounded-xl text-center border border-gold-200/30 print:border-none print:p-0">
                         <span class="text-xs uppercase font-bold text-orange-500 tracking-wider block print:text-black">Completed</span>
-                        <span class="text-xs font-semibold text-onyx-900 dark:text-white print:text-black">Davao Region College Foundation</span>
+                        <span class="text-xs font-semibold text-onyx-900 print:text-black">Davao Region College Foundation</span>
                     </div>
                 </div>
                 <div class="pt-7 space-y-5">
-                    <p class="text-sm font-light text-onyx-800/80 dark:text-onyx-200/80 leading-relaxed print:text-black">
+                    <p class="text-sm font-light text-onyx-800/80 leading-relaxed print:text-black">
                         Acquired comprehensive knowledge in marketing structures, client consumer psychology, digital advertising campaign models, pricing frameworks, and competitive brand analyses. 
                     </p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-3">
                         <div class="flex items-start space-x-3">
                             <i class="fa-solid fa-square-poll-vertical text-orange-500 mt-1 print:hidden"></i>
                             <div>
-                                <h4 class="font-bold text-xs text-onyx-900 dark:text-white print:text-black">Business Analytics</h4>
-                                <p class="text-xs text-onyx-800/60 dark:text-onyx-400/60 mt-1 leading-relaxed print:text-black">Trained to handle business records, target goals, and corporate presentation models systematically.</p>
+                                <h4 class="font-bold text-xs text-onyx-900 print:text-black">Business Analytics</h4>
+                                <p class="text-xs text-onyx-800/60 mt-1 leading-relaxed print:text-black">Trained to handle business records, target goals, and corporate presentation models systematically.</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-3">
                             <i class="fa-solid fa-bullhorn text-orange-500 mt-1 print:hidden"></i>
                             <div>
-                                <h4 class="font-bold text-xs text-onyx-900 dark:text-white print:text-black">Market Campaign Planning</h4>
-                                <p class="text-xs text-onyx-800/60 dark:text-onyx-400/60 mt-1 leading-relaxed print:text-black">Analyzed modern digital funnels, search marketing behaviors, and customer support conversion funnels.</p>
+                                <h4 class="font-bold text-xs text-onyx-900 print:text-black">Market Campaign Planning</h4>
+                                <p class="text-xs text-onyx-800/60 mt-1 leading-relaxed print:text-black">Analyzed modern digital funnels, search marketing behaviors, and customer support conversion funnels.</p>
                             </div>
                         </div>
                     </div>
@@ -1460,59 +1413,59 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-white dark:bg-onyx-950 relative print:py-6">
+    <section id="contact" class="py-24 bg-white relative print:py-6">
         <div class="max-w-7xl mx-auto px-6 print-full-width">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start print-full-width">
                 <div class="lg:col-span-5 space-y-8 reveal-element print-full-width">
                     <div>
                         <span class="text-orange-500 font-semibold tracking-widest text-xs uppercase block mb-3">Connect</span>
-                        <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 dark:text-white print:text-2xl">Get in Touch</h2>
+                        <h2 class="text-3xl md:text-5xl font-serif font-bold text-onyx-900 print:text-2xl">Get in Touch</h2>
                         <div class="w-20 h-1 bg-gradient-to-r from-gold-500 to-orange-500 mt-5 rounded-full print:hidden"></div>
                     </div>
                     
-                    <p class="text-onyx-800/70 dark:text-onyx-200/70 leading-relaxed font-light print:text-black">
+                    <p class="text-onyx-800/70 leading-relaxed font-light print:text-black">
                         Are you seeking a responsible, analytical, and highly organized executive professional to join your operations? Drop a line directly or verify the credentials listed here.
                     </p>
 
                     <!-- Contact Details - Improved Spacing -->
                     <div class="space-y-5 print:space-y-3">
-                        <div class="flex items-start space-x-4 p-5 rounded-xl bg-gold-50/20 dark:bg-onyx-900 border border-gold-100/50 shadow-sm print:p-3">
-                            <div class="w-11 h-11 rounded-lg bg-gold-100 dark:bg-gold-950/40 flex items-center justify-center text-gold-500 flex-shrink-0 print:hidden">
+                        <div class="flex items-start space-x-4 p-5 rounded-xl bg-gold-50/20 border border-gold-100/50 shadow-sm print:p-3">
+                            <div class="w-11 h-11 rounded-lg bg-gold-100 flex items-center justify-center text-gold-500 flex-shrink-0 print:hidden">
                                 <i class="fa-solid fa-map-location-dot"></i>
                             </div>
                             <div>
-                                <p class="text-xs text-onyx-800/40 dark:text-onyx-400/60 uppercase font-semibold mb-1">Permanent Station</p>
-                                <p class="font-semibold text-sm text-onyx-900 dark:text-white leading-relaxed">Brgy. Ula, Tugbok Dist. Davao City, Philippines</p>
+                                <p class="text-xs text-onyx-800/40 uppercase font-semibold mb-1">Permanent Station</p>
+                                <p class="font-semibold text-sm text-onyx-900 leading-relaxed">Brgy. Ula, Tugbok Dist. Davao City, Philippines</p>
                             </div>
                         </div>
 
-                        <div class="flex items-start space-x-4 p-5 rounded-xl bg-gold-50/20 dark:bg-onyx-900 border border-gold-100/50 shadow-sm print:p-3">
-                            <div class="w-11 h-11 rounded-lg bg-orange-100 dark:bg-orange-950/40 flex items-center justify-center text-orange-500 flex-shrink-0 print:hidden">
+                        <div class="flex items-start space-x-4 p-5 rounded-xl bg-gold-50/20 border border-gold-100/50 shadow-sm print:p-3">
+                            <div class="w-11 h-11 rounded-lg bg-orange-100 flex items-center justify-center text-orange-500 flex-shrink-0 print:hidden">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
                             <div>
-                                <p class="text-xs text-onyx-800/40 dark:text-onyx-400/60 uppercase font-semibold mb-1">Phone Line / Mobile</p>
-                                <a href="tel:+639163961196" class="font-semibold text-sm text-onyx-900 dark:text-white hover:text-gold-500 transition-colors">+63 916 396 1196</a>
+                                <p class="text-xs text-onyx-800/40 uppercase font-semibold mb-1">Phone Line / Mobile</p>
+                                <a href="tel:+639163961196" class="font-semibold text-sm text-onyx-900 hover:text-gold-500 transition-colors">+63 916 396 1196</a>
                             </div>
                         </div>
 
-                        <div class="flex items-start space-x-4 p-5 rounded-xl bg-gold-50/20 dark:bg-onyx-900 border border-gold-100/50 shadow-sm print:p-3">
-                            <div class="w-11 h-11 rounded-lg bg-gold-100 dark:bg-gold-950/40 flex items-center justify-center text-gold-500 flex-shrink-0 print:hidden">
+                        <div class="flex items-start space-x-4 p-5 rounded-xl bg-gold-50/20 border border-gold-100/50 shadow-sm print:p-3">
+                            <div class="w-11 h-11 rounded-lg bg-gold-100 flex items-center justify-center text-gold-500 flex-shrink-0 print:hidden">
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
                             <div>
-                                <p class="text-xs text-onyx-800/40 dark:text-onyx-400/60 uppercase font-semibold mb-1">Primary Email Address</p>
-                                <a href="mailto:monteroanya24@gmail.com" class="font-semibold text-sm text-onyx-900 dark:text-white hover:text-gold-500 transition-colors break-all">monteroanya24@gmail.com</a>
+                                <p class="text-xs text-onyx-800/40 uppercase font-semibold mb-1">Primary Email Address</p>
+                                <a href="mailto:monteroanya24@gmail.com" class="font-semibold text-sm text-onyx-900 hover:text-gold-500 transition-colors break-all">monteroanya24@gmail.com</a>
                             </div>
                         </div>
 
-                        <div class="flex items-start space-x-4 p-5 rounded-xl bg-gold-50/20 dark:bg-onyx-900 border border-gold-100/50 shadow-sm print:p-3">
-                            <div class="w-11 h-11 rounded-lg bg-orange-100 dark:bg-orange-950/40 flex items-center justify-center text-orange-500 flex-shrink-0 print:hidden">
+                        <div class="flex items-start space-x-4 p-5 rounded-xl bg-gold-50/20 border border-gold-100/50 shadow-sm print:p-3">
+                            <div class="w-11 h-11 rounded-lg bg-orange-100 flex items-center justify-center text-orange-500 flex-shrink-0 print:hidden">
                                 <i class="fa-solid fa-globe"></i>
                             </div>
                             <div>
-                                <p class="text-xs text-onyx-800/40 dark:text-onyx-400/60 uppercase font-semibold mb-1">Professional Portfolio Web</p>
-                                <a href="https://monteroanya24-hash.github.io/liezelann.github.io/#work" target="_blank" class="font-semibold text-xs text-onyx-900 dark:text-white hover:text-gold-500 transition-colors break-all leading-relaxed">monteroanya24-hash.github.io/liezelann.github.io/</a>
+                                <p class="text-xs text-onyx-800/40 uppercase font-semibold mb-1">Professional Portfolio Web</p>
+                                <a href="https://monteroanya24-hash.github.io/liezelann.github.io/#work" target="_blank" class="font-semibold text-xs text-onyx-900 hover:text-gold-500 transition-colors break-all leading-relaxed">monteroanya24-hash.github.io/liezelann.github.io/</a>
                             </div>
                         </div>
                     </div>
@@ -1520,10 +1473,10 @@
                     <div class="pt-6 no-print">
                         <p class="text-xs uppercase tracking-widest font-semibold text-gold-500 mb-4">Connect on Networks</p>
                         <div class="flex space-x-3">
-                            <a href="https://monteroanya24-hash.github.io/liezelann.github.io/#work" target="_blank" class="w-11 h-11 rounded-full border border-gold-200/60 hover:bg-gold-500 hover:text-white hover:border-gold-500 flex items-center justify-center transition-all text-gold-500 dark:text-gold-400">
+                            <a href="https://monteroanya24-hash.github.io/liezelann.github.io/#work" target="_blank" class="w-11 h-11 rounded-full border border-gold-200/60 hover:bg-gold-500 hover:text-white hover:border-gold-500 flex items-center justify-center transition-all text-gold-500">
                                 <i class="fa-solid fa-globe text-lg"></i>
                             </a>
-                            <a href="#" class="w-11 h-11 rounded-full border border-gold-200/60 hover:bg-gold-500 hover:text-white hover:border-gold-500 flex items-center justify-center transition-all text-gold-500 dark:text-gold-400">
+                            <a href="#" class="w-11 h-11 rounded-full border border-gold-200/60 hover:bg-gold-500 hover:text-white hover:border-gold-500 flex items-center justify-center transition-all text-gold-500">
                                 <i class="fa-brands fa-linkedin-in text-lg"></i>
                             </a>
                         </div>
@@ -1531,13 +1484,13 @@
                 </div>
 
                 <!-- Contact Form -->
-                <div class="lg:col-span-7 bg-white dark:bg-onyx-950 p-10 sm:p-12 rounded-3xl border border-gold-100/40 dark:border-onyx-800/50 shadow-xl relative reveal-element no-print">
-                    <div id="form-success-alert" class="hidden absolute inset-0 bg-white dark:bg-onyx-950 rounded-3xl p-8 flex flex-col items-center justify-center text-center z-10 transition-opacity duration-300">
-                        <div class="w-16 h-16 rounded-full bg-green-100 dark:bg-green-950/40 flex items-center justify-center text-green-500 text-3xl mb-4">
+                <div class="lg:col-span-7 bg-white p-10 sm:p-12 rounded-3xl border border-gold-100/40 shadow-xl relative reveal-element no-print">
+                    <div id="form-success-alert" class="hidden absolute inset-0 bg-white rounded-3xl p-8 flex flex-col items-center justify-center text-center z-10 transition-opacity duration-300">
+                        <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-3xl mb-4">
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
-                        <h3 class="font-serif font-bold text-2xl text-onyx-900 dark:text-white">Inquiry Transmitted!</h3>
-                        <p class="text-sm text-onyx-800/60 dark:text-onyx-400/60 mt-3 max-w-sm">
+                        <h3 class="font-serif font-bold text-2xl text-onyx-900">Inquiry Transmitted!</h3>
+                        <p class="text-sm text-onyx-800/60 mt-3 max-w-sm">
                             Thank you for reaching out. Liezel Ann Villanueva will review your requirements and respond within 24 business hours.
                         </p>
                         <button onclick="resetContactForm()" class="mt-6 px-6 py-2.5 bg-gold-500 text-white rounded-full text-xs font-semibold uppercase tracking-wider shadow-md hover:bg-orange-500 transition-colors">
@@ -1549,17 +1502,17 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-2">
                                 <label for="form-name" class="block text-xs uppercase tracking-widest font-semibold text-gold-500">Your Identity</label>
-                                <input type="text" id="form-name" required placeholder="Hiring Manager Name" class="w-full px-4 py-3.5 rounded-xl border border-gold-100 dark:border-onyx-800 bg-gold-50/20 dark:bg-onyx-900 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                                <input type="text" id="form-name" required placeholder="Hiring Manager Name" class="w-full px-4 py-3.5 rounded-xl border border-gold-100 bg-gold-50/20 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
                             </div>
                             <div class="space-y-2">
                                 <label for="form-email" class="block text-xs uppercase tracking-widest font-semibold text-gold-500">Corporate Email</label>
-                                <input type="email" id="form-email" required placeholder="manager@company.com" class="w-full px-4 py-3.5 rounded-xl border border-gold-100 dark:border-onyx-800 bg-gold-50/20 dark:bg-onyx-900 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                                <input type="email" id="form-email" required placeholder="manager@company.com" class="w-full px-4 py-3.5 rounded-xl border border-gold-100 bg-gold-50/20 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
                             </div>
                         </div>
 
                         <div class="space-y-2">
                             <label for="form-subject" class="block text-xs uppercase tracking-widest font-semibold text-gold-500">Project Type / Capacity</label>
-                            <select id="form-subject" class="w-full px-4 py-3.5 rounded-xl border border-gold-100 dark:border-onyx-800 bg-gold-50/20 dark:bg-onyx-900 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                            <select id="form-subject" class="w-full px-4 py-3.5 rounded-xl border border-gold-100 bg-gold-50/20 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
                                 <option value="Marketing Strategist Placement">Digital Marketing Specialist Roles</option>
                                 <option value="SEO Optimization Projects">SEO Audit & Site Growth Project</option>
                                 <option value="Customer Relations Management">Technical Customer Care Operations</option>
@@ -1569,7 +1522,7 @@
 
                         <div class="space-y-2">
                             <label for="form-message" class="block text-xs uppercase tracking-widest font-semibold text-gold-500">Role specifications / Project brief</label>
-                            <textarea id="form-message" required rows="4" placeholder="Briefly describe the candidate requirements..." class="w-full px-4 py-3.5 rounded-xl border border-gold-100 dark:border-onyx-800 bg-gold-50/20 dark:bg-onyx-900 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"></textarea>
+                            <textarea id="form-message" required rows="4" placeholder="Briefly describe the candidate requirements..." class="w-full px-4 py-3.5 rounded-xl border border-gold-100 bg-gold-50/20 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"></textarea>
                         </div>
 
                         <div class="pt-3">
@@ -1585,60 +1538,29 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white dark:bg-onyx-950 border-t border-gold-100 dark:border-onyx-900 py-12 relative no-print">
+    <footer class="bg-white border-t border-gold-100 py-12 relative no-print">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             <div class="flex items-center space-x-2">
                 <span class="gold-orange-gradient text-white font-serif font-bold w-10 h-10 flex items-center justify-center rounded-lg shadow-md">LV</span>
-                <span class="font-serif text-lg font-bold tracking-wide text-onyx-900 dark:text-white">
+                <span class="font-serif text-lg font-bold tracking-wide text-onyx-900">
                     Liezel Ann<span class="text-gold-500"> Villanueva</span>
                 </span>
             </div>
-            <p class="text-xs text-onyx-800/40 dark:text-onyx-400/40">
+            <p class="text-xs text-onyx-800/40">
                 &copy; 2026 Liezel Ann Villanueva. All rights reserved. Made with responsive Gold, White, & Orange themes.
             </p>
             <div class="flex space-x-4">
-                <a href="#home" class="text-xs text-onyx-800/60 dark:text-onyx-400/60 hover:text-gold-500 font-medium transition-colors">Home</a>
-                <span class="text-onyx-800/20 dark:text-onyx-800">|</span>
-                <a href="#experience" class="text-xs text-onyx-800/60 dark:text-onyx-400/60 hover:text-gold-500 font-medium transition-colors">Journey</a>
-                <span class="text-onyx-800/20 dark:text-onyx-800">|</span>
-                <button onclick="window.print()" class="text-xs text-onyx-800/60 dark:text-onyx-400/60 hover:text-gold-500 font-medium transition-colors">Print PDF</button>
+                <a href="#home" class="text-xs text-onyx-800/60 hover:text-gold-500 font-medium transition-colors">Home</a>
+                <span class="text-onyx-800/20">|</span>
+                <a href="#experience" class="text-xs text-onyx-800/60 hover:text-gold-500 font-medium transition-colors">Journey</a>
+                <span class="text-onyx-800/20">|</span>
+                <button onclick="window.print()" class="text-xs text-onyx-800/60 hover:text-gold-500 font-medium transition-colors">Print PDF</button>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script>
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-            updateThemeIcons(true);
-        } else {
-            document.documentElement.classList.remove('dark');
-            updateThemeIcons(false);
-        }
-
-        const btnToggle = document.getElementById('theme-toggle');
-        const btnToggleMobile = document.getElementById('theme-toggle-mobile');
-        btnToggle.addEventListener('click', toggleTheme);
-        btnToggleMobile.addEventListener('click', toggleTheme);
-
-        function toggleTheme() {
-            const isDark = document.documentElement.classList.toggle('dark');
-            localStorage.theme = isDark ? 'dark' : 'light';
-            updateThemeIcons(isDark);
-        }
-
-        function updateThemeIcons(isDark) {
-            const icon = document.getElementById('theme-toggle-icon');
-            const iconMobile = document.getElementById('theme-toggle-icon-mobile');
-            if (isDark) {
-                icon.className = 'fa-solid fa-sun text-lg';
-                iconMobile.className = 'fa-solid fa-sun';
-            } else {
-                icon.className = 'fa-solid fa-moon text-lg';
-                iconMobile.className = 'fa-solid fa-moon';
-            }
-        }
-
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
@@ -1745,7 +1667,7 @@
         function switchSkillTab(tabName) {
             const tabs = document.querySelectorAll('.skill-tab-btn');
             tabs.forEach(tab => {
-                tab.className = 'skill-tab-btn px-6 py-3 rounded-full font-semibold text-xs uppercase tracking-wider bg-white dark:bg-onyx-800 hover:bg-gold-50 border border-gold-100 text-onyx-800 dark:text-onyx-100 transition-all';
+                tab.className = 'skill-tab-btn px-6 py-3 rounded-full font-semibold text-xs uppercase tracking-wider bg-white hover:bg-gold-50 border border-gold-100 text-onyx-800 transition-all';
             });
 
             const activeTab = document.getElementById(`tab-${tabName}`);
@@ -1757,12 +1679,12 @@
             let html = '<div class="skill-group-card space-y-4">';
             for (let i = 0; i < Math.ceil(list.length / 2); i++) {
                 html += `
-                    <div class="p-6 bg-white dark:bg-onyx-950 rounded-2xl border border-gold-100/50 shadow-sm">
+                    <div class="p-6 bg-white rounded-2xl border border-gold-100/50 shadow-sm">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="font-medium text-onyx-900 dark:text-white text-sm">${list[i].name}</span>
+                            <span class="font-medium text-onyx-900 text-sm">${list[i].name}</span>
                             <span class="text-xs text-orange-500 font-semibold">${list[i].level}%</span>
                         </div>
-                        <div class="w-full h-2 bg-onyx-50 dark:bg-onyx-800 rounded-full overflow-hidden">
+                        <div class="w-full h-2 bg-onyx-50 rounded-full overflow-hidden">
                             <div class="h-full gold-orange-gradient" style="width: ${list[i].level}%"></div>
                         </div>
                     </div>`;
@@ -1771,12 +1693,12 @@
             
             for (let i = Math.ceil(list.length / 2); i < list.length; i++) {
                 html += `
-                    <div class="p-6 bg-white dark:bg-onyx-950 rounded-2xl border border-gold-100/50 shadow-sm">
+                    <div class="p-6 bg-white rounded-2xl border border-gold-100/50 shadow-sm">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="font-medium text-onyx-900 dark:text-white text-sm">${list[i].name}</span>
+                            <span class="font-medium text-onyx-900 text-sm">${list[i].name}</span>
                             <span class="text-xs text-orange-500 font-semibold">${list[i].level}%</span>
                         </div>
-                        <div class="w-full h-2 bg-onyx-50 dark:bg-onyx-800 rounded-full overflow-hidden">
+                        <div class="w-full h-2 bg-onyx-50 rounded-full overflow-hidden">
                             <div class="h-full gold-orange-gradient" style="width: ${list[i].level}%"></div>
                         </div>
                     </div>`;
